@@ -28,25 +28,46 @@ $fuenteTextos:'Montserrat';
 
 
 
-$color00: white;
-$color00svg: invert(100%) sepia(100%) saturate(0%) hue-rotate(159deg) brightness(104%) contrast(104%);
-$color00bis: #ebebeb;
-$color01: #1e1e1e;
-$color01bis:rgb(176, 176, 176);
-$color01bis2: rgba(0, 0, 0, 0.5);
-$color02: #234b66;
-$color02bis: #234b66;
-$color02svg: invert(24%) sepia(13%) saturate(2279%) hue-rotate(161deg) brightness(96%) contrast(88%);
-$color03: #d47523;
-$color03svg: invert(39%) sepia(100%) saturate(384%) hue-rotate(346deg) brightness(102%) contrast(91%);
+$bg-dark: #282828;
+$bg-darker: #1e1e1e;
+$text-light: #ffffff;
+$text-muted: #a0a0a0;
+$accent-red: #FF145A;
 
+// Mapeo a las variables antiguas por si hay código legacy que las use
+$color00: $text-light;
+$color00bis: $text-muted;
+$color01: $bg-dark;
+$color01bis: $bg-darker;
+$color02: $accent-red;
+$color02bis: $accent-red;
+$color03: $accent-red; // Mantenido por compatibilidad
 
-
+// Filtros SVG для иконок (с принудительным сбросом исходного цвета в черный)
+$color00svg: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+$color01svg: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+$color02svg: brightness(0) saturate(100%) invert(19%) sepia(91%) saturate(5427%) hue-rotate(338deg) brightness(97%) contrast(106%); // Aprox #FF145A
+$color03svg: brightness(0) saturate(100%) invert(53%) sepia(68%) saturate(1476%) hue-rotate(352deg) brightness(92%) contrast(89%); // Aprox #d47523
 $tablet: 800px;
 $desktop: 1200px;
 
 $padMin: 1.5rem;
 $padMax: 3rem;
+
+@mixin accent-glow-hover($liftY: -5px, $glowOpacity: 0.35) {
+  transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease,
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.4s ease;
+
+  &:hover {
+    box-shadow: 0 0 35px rgba(255, 20, 90, $glowOpacity),
+                0 0 70px rgba(255, 20, 90, $glowOpacity * 0.4);
+    @if $liftY != 0 {
+      transform: translateY($liftY);
+    }
+  }
+}
 
 html{
     scroll-behavior: smooth;
@@ -156,6 +177,8 @@ a{
 
 // Estilos básicos de etiquetas principales
 body{
+    background-color: $bg-dark;
+    color: $text-light;
     display: flex;
     flex-direction: column;
     align-items: center;

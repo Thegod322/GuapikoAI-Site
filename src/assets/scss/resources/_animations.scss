@@ -1,0 +1,19 @@
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 1.2s ease-out;
+
+  &.is-visible {
+    opacity: 1;
+  }
+}

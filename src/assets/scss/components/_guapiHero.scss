@@ -1,0 +1,82 @@
+@use "../resources/config" as c;
+
+.guapiHero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding: c.$padMax;
+  background-color: c.$bg-dark;
+  position: relative;
+
+  &__tagline {
+    font-size: 0.9rem;
+    color: c.$text-muted;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: clamp(3rem, 11vw, 9rem);
+    color: c.$text-light;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    width: 100%;
+    letter-spacing: -1px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+
+    span {
+      color: c.$accent-red;
+    }
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+
+    &--1 {
+      text-align: start;
+    }
+
+    &--2 {
+      text-align: center;
+    }
+
+    &--3 {
+      text-align: end;
+      color: c.$accent-red;
+    }
+  }
+
+  &__subtitle {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: c.$text-muted;
+    max-width: 800px;
+    line-height: 1.6;
+    margin-bottom: 4rem;
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: transparent;
+    color: c.$text-light;
+    border: 1px solid c.$accent-red;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include c.accent-glow-hover(-3px, 0.45);
+
+    &:hover {
+      background-color: c.$accent-red;
+      color: c.$text-light;
+    }
+  }
+}

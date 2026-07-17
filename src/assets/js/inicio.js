@@ -1,5 +1,10 @@
-// Importamos el archivo principal de estilos.
-import "../scss/inicio.scss";
-import "./resources/_global.js";
+import '../scss/inicio.scss';
+import { initAnimations } from './resources/animations';
+import { initGuapiHero } from './components/_guapiHero';
+import { initGuapiServices } from './components/_guapiServices';
 
-import "./resources/_artForm02.js";
+document.addEventListener("DOMContentLoaded", () => {
+    initAnimations();
+    initGuapiHero();
+    initGuapiServices();
+});

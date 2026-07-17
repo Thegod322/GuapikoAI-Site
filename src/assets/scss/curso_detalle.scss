@@ -1,0 +1,29 @@
+@use "resources/config" as c;
+@use "resources/global";
+@use "components/guapiHero";
+@use "components/guapiPhilosophy";
+
+.cursoAccordion {
+  width: 100%;
+  max-width: 800px;
+  background-color: #1e1e1e;
+  border-top: 2px solid #FF145A;
+  margin-bottom: 2rem;
+  
+  &__item {
+    border-bottom: 1px solid #333;
+    padding: 2rem;
+    text-align: left;
+    @include c.accent-glow-hover(-2px, 0.3);
+    
+    h3 {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    p {
+      color: #a0a0a0;
+    }
+  }
+}

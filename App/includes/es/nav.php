@@ -5,8 +5,8 @@
 <nav class="nav01" data-nav01>
   <div class="nav01__inner">
     <a class="nav01__brand" href="/es" aria-label="Ir al inicio">
-      <span class="nav01__logo" aria-hidden="true">LS</span>
-      <span class="nav01__brandText">Liquid Stack</span>
+      <img src="<?= asset('assets/img/logos/GuapiLogo.svg') ?>" class="nav01__logo" alt="Guapiko AI Studio">
+      <span class="nav01__brandText">GUAPIKO.</span>
     </a>
 
     <button class="nav01__toggle" type="button" aria-controls="nav01-menu-es" aria-expanded="false" aria-label="Abrir menú" data-nav01-toggle data-nav01-label-open="Abrir menú" data-nav01-label-close="Cerrar menú">
