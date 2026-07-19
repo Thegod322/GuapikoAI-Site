@@ -28,7 +28,7 @@
       <!-- Services Teaser -->
       <section class="guapiPhilosophy reveal-up">
         <div class="guapiPhilosophy__content">
-          <h2 class="guapiPhilosophy__heading">Ingeniería del Mañana</h2>
+          <h2 class="guapiPhilosophy__heading">INGENIERÍA DEL MAÑANA</h2>
           <p class="guapiPhilosophy__text">No creamos simples interfaces. Diseñamos ecosistemas inteligentes y deterministas. Elevamos cada proceso mediante IA, reduciendo la fricción a cero.</p>
           <a href="<?= url('es/servicios') ?>" class="guapiHero__cta" style="margin-top: 2rem;">Explorar capacidades</a>
         </div>

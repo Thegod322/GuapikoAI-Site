@@ -159,7 +159,7 @@ $tamanoControl: 3.75rem;
     }
 
     &__inner{
-        width: min(100% - 2rem, $anchoContenido);
+        width: 100%;
         min-height: 4.5rem;
         margin-inline: auto;
         display: flex;

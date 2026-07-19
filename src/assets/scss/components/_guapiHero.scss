@@ -10,6 +10,22 @@
   padding: c.$padMax;
   background-color: c.$bg-dark;
   position: relative;
+  overflow: hidden;
+
+  &__canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  > *:not(&__canvas) {
+    position: relative;
+    z-index: 1;
+  }
 
   &__tagline {
     font-size: 0.9rem;
