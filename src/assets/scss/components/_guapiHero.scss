@@ -22,7 +22,7 @@
     pointer-events: none;
   }
 
-  > *:not(&__canvas) {
+  & > *:not(&__canvas) {
     position: relative;
     z-index: 1;
   }

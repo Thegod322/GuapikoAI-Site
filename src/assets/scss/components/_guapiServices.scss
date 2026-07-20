@@ -1,13 +1,16 @@
 @use "../resources/config" as c;
 
+section{
+  align-items: start;
+}
 .guapiServices {
   min-height: 80vh;
   width: 100%;
   padding: c.$padMax;
   display: flex;
   flex-direction: column;
-  align-items: center;
   background-color: c.$bg-dark;
+
   
   &__header {
     width: 100%;

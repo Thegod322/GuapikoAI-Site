@@ -8,11 +8,9 @@
   justify-content: center;
   background-color: c.$bg-darker;
   padding: c.$padMax;
-  padding-left: 10%;
   text-align: left;
-  @media only screen and (min-width: c.$desktop) {
-    padding-left: 15%;
-  }
+
+
 
   &__content {
     max-width: 900px;
