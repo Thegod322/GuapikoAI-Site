@@ -82,6 +82,8 @@ if ($isGlobalRoute) {
 $GLOBALS['lang'] = $lang;
 $GLOBALS['app_langs'] = $langs;
 $GLOBALS['app_global_routes'] = array_keys($globalRoutes);
+$GLOBALS['app_routes'] = $routes;
+$GLOBALS['current_url'] = $url;
 
 if ($route === null) {
     http_response_code(404);

@@ -26,8 +26,8 @@
 
         <div class="nav01__langs" aria-label="Idiomas">
           <!-- Para mantener el ejemplo sencillo, cada idioma enlaza a su inicio. -->
-          <a class="nav01__lang is-active" href="/es" lang="es" hreflang="es" aria-current="true">ES</a>
-          <a class="nav01__lang" href="/eu" lang="eu" hreflang="eu">EU</a>
+          <a class="nav01__lang <?= $lang === 'es' ? 'is-active' : '' ?>" href="<?= switch_lang_url('es') ?>" lang="es" hreflang="es" <?= $lang === 'es' ? 'aria-current="true"' : '' ?>>ES</a>
+          <a class="nav01__lang <?= $lang === 'eu' ? 'is-active' : '' ?>" href="<?= switch_lang_url('eu') ?>" lang="eu" hreflang="eu" <?= $lang === 'eu' ? 'aria-current="true"' : '' ?>>EU</a>
         </div>
       </div>
     </div>

@@ -55,6 +55,22 @@ return [
                 'view' => 'legal.php',
                 'resources' => 'src/assets/js/legal.js',
             ],
+            '/es/equipo' => [
+                'view' => 'equipo.php',
+                'resources' => 'src/assets/js/equipo.js',
+            ],
+            '/es/productos' => [
+                'view' => 'productos.php',
+                'resources' => 'src/assets/js/productos.js',
+            ],
+            '/es/productos/producto-1' => [
+                'view' => 'producto1.php',
+                'resources' => 'src/assets/js/producto.js',
+            ],
+            '/es/productos/producto-2' => [
+                'view' => 'producto2.php',
+                'resources' => 'src/assets/js/producto.js',
+            ],
             '/es/404' => [
                 'view' => '404.php',
                 'resources' => 'src/assets/js/inicio.js',
@@ -96,6 +112,22 @@ return [
             '/eu/lege-oharra' => [
                 'view' => 'legal.php',
                 'resources' => 'src/assets/js/legal.js',
+            ],
+            '/eu/taldea' => [
+                'view' => 'equipo.php',
+                'resources' => 'src/assets/js/equipo.js',
+            ],
+            '/eu/produktuak' => [
+                'view' => 'productos.php',
+                'resources' => 'src/assets/js/productos.js',
+            ],
+            '/eu/produktuak/produktua-1' => [
+                'view' => 'producto1.php',
+                'resources' => 'src/assets/js/producto.js',
+            ],
+            '/eu/produktuak/produktua-2' => [
+                'view' => 'producto2.php',
+                'resources' => 'src/assets/js/producto.js',
             ],
             '/eu/404' => [
                 'view' => '404.php',

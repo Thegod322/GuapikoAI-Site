@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="<?= e($lang ?? env('LANG_DEFAULT', 'es')) ?>">
+<html lang="<?= e($lang ?? env('LANG_DEFAULT', 'eu')) ?>">
   <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="<?= asset('favicon.svg') ?>">
-    <link rel="canonical" href="<?= url('/zerbitzuak/altzari-zaharberritzailea') ?>">
-    <title>Producto 2</title>
-    <meta name="description" content="Detalle del producto 2 de nuestra panaderia.">
+    <link rel="canonical" href="<?= url('/producto2') ?>">
+    <title>2. Produktua</title>
+    <meta name="description" content="Gure okindegiko 2. produktuaren xehetasuna.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?= vite_tags($route['resources'] ?? null) ?>

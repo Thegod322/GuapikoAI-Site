@@ -1,5 +1,5 @@
 <?php
-// Footer en euskera. Los textos, rutas y datos de contacto se editan aquí
+// Footer en castellano. Los textos, rutas y datos de contacto se editan aquí
 // sin depender de arrays de configuración ni de condiciones de idioma.
 ?>
 <footer class="footer01">
@@ -8,7 +8,7 @@
       <h2 class="footer01__title" id="footer01-menu-title-eu">Nabigazioa</h2>
       <?php
       // Se reutiliza el listado para no mantener dos menús diferentes.
-      $idSubmenu = 'footer-zerbitzuak-eu';
+      $idSubmenu = 'footer-servicios-eu';
       require app_path('includes/eu/enlaces.php');
       ?>
     </section>
@@ -16,9 +16,9 @@
     <section class="footer01__column" aria-labelledby="footer01-legal-title-eu">
       <h2 class="footer01__title" id="footer01-legal-title-eu">Legezkoa</h2>
       <ul class="footer01__list">
-        <li><a class="footer01__link" href="/eu/lege-oharra#aviso-legal">Lege oharra</a></li>
-        <li><a class="footer01__link" href="/eu/lege-oharra#politica-privacidad">Pribatutasun politika</a></li>
-        <li><a class="footer01__link" href="/eu/lege-oharra#gestion-cookies">Cookieen kudeaketa</a></li>
+        <li><a class="footer01__link" href="/eu/lege-oharra#aviso-legal">Lege-oharra</a></li>
+        <li><a class="footer01__link" href="/eu/lege-oharra#politica-privacidad">Pribatutasun-politika</a></li>
+        <li><a class="footer01__link" href="/eu/lege-oharra#gestion-cookies">Cookien kudeaketa</a></li>
       </ul>
     </section>
 
@@ -35,7 +35,7 @@
         </a>
         <a class="footer01__link" href="https://www.google.com/maps/search/?api=1&query=Calle+Ejemplo+1" target="_blank" rel="noopener noreferrer">
           <img class="footer01__icon" src="<?= asset('assets/img/icons/map.svg') ?>" alt="">
-          <span>Ikusi Google Mapsen</span>
+          <span>Ikusi Google Maps-en</span>
         </a>
         <p class="footer01__text">
           <img class="footer01__icon" src="<?= asset('assets/img/icons/pin.svg') ?>" alt="">
@@ -46,6 +46,6 @@
   </div>
 
   <div class="footer01__bottom">
-    <p>xxxx-ek garatua. &copy; <?= date('Y') ?> Eskubide guztiak erreserbatuta.</p>
+    <p>xxxx-k garatua. &copy; <?= date('Y') ?> Eskubide guztiak erreserbatuta.</p>
   </div>
 </footer>

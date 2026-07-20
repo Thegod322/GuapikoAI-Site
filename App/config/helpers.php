@@ -203,3 +203,28 @@ function vite_tags(?string $resources): string
 
     return implode(PHP_EOL, $tags);
 }
+
+function switch_lang_url(string $targetLang): string
+{
+    $currentUrl = $GLOBALS['current_url'] ?? '/';
+    $lang = $GLOBALS['lang'] ?? env('LANG_DEFAULT', 'es');
+    $routes = $GLOBALS['app_routes'] ?? [];
+    
+    // Si la url actual no esta en las rutas del idioma actual, devolvemos la raiz del idioma destino
+    if (!isset($routes[$lang][$currentUrl])) {
+        return '/' . $targetLang;
+    }
+    
+    $currentView = $routes[$lang][$currentUrl]['view'];
+    
+    // Buscamos la vista equivalente en el idioma destino
+    if (isset($routes[$targetLang])) {
+        foreach ($routes[$targetLang] as $u => $routeData) {
+            if ($routeData['view'] === $currentView) {
+                return url($u);
+            }
+        }
+    }
+    
+    return '/' . $targetLang;
+}

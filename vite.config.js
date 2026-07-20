@@ -26,6 +26,9 @@ export default defineConfig({
         curso_detalle: resolvePath("./src/assets/js/curso_detalle.js"),
         legal: resolvePath("./src/assets/js/legal.js"),
         showroom: resolvePath("./src/assets/js/showroom.js"),
+        equipo: resolvePath("./src/assets/js/equipo.js"),
+        productos: resolvePath("./src/assets/js/productos.js"),
+        producto: resolvePath("./src/assets/js/producto.js"),
       },
       output: {
         entryFileNames: "assets/[name]-[hash].js",

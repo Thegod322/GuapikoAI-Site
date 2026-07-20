@@ -1,19 +1,19 @@
 <!doctype html>
-<html lang="<?= e($lang ?? env('LANG_DEFAULT', 'es')) ?>">
+<html lang="<?= e($lang ?? env('LANG_DEFAULT', 'eu')) ?>">
   <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="<?= asset('favicon.svg') ?>">
-    <link rel="canonical" href="<?= url('/es/casos-de-exito/detalle') ?>">
-    <title>MDD-Editor | Casos de Éxito | Guapiko AI Studio</title>
-    <meta name="description" content="Un editor nodal con interfaz asimétrica que convierte el caos estructural en un ecosistema visual fluido.">
+    <link rel="canonical" href="<?= url('/eu/kasu-arrakastatsuak/xehetasuna') ?>">
+    <title>MDD-Editor | Kasu Arrakastatsuak | Guapiko AI Studio</title>
+    <meta name="description" content="Egituraren kaosa ekosistema bisual fluido bihurtzen duen nodo-editorea, interfaze asimetrikoarekin.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?= vite_tags($route['resources'] ?? null) ?>
   </head>
   <body>
-    <?php require app_path('includes/es/nav.php'); ?>
+    <?php require app_path('includes/eu/nav.php'); ?>
 
     <header class="guapiHero">
-      <p class="guapiHero__tagline reveal-fade">Caso de Éxito</p>
+      <p class="guapiHero__tagline reveal-fade">Kasu Arrakastatsua</p>
       <h1 class="guapiHero__title reveal-up"><span>MDD-</span>Editor</h1>
     </header>
 
@@ -21,15 +21,15 @@
 
       <section class="guapiPhilosophy reveal-up">
         <div class="guapiPhilosophy__content">
-          <h2 class="guapiPhilosophy__heading">The Challenge (Antes)</h2>
-          <p class="guapiPhilosophy__text">La necesidad de orquestar agentes LLM mediante una topología compleja y manejar flujos de datos masivos sin perder rendimiento visual.</p>
+          <h2 class="guapiPhilosophy__heading">The Challenge (Lehen)</h2>
+          <p class="guapiPhilosophy__text">LLM agenteak topologia konplexu baten bidez orkestratzeko eta datu-fluxu masiboak kudeatzeko beharra, errendimendu bisuala galdu gabe.</p>
         </div>
       </section>
 
       <section class="guapiPhilosophy reveal-up" style="background-color: transparent;">
         <div class="guapiPhilosophy__content">
-          <h2 class="guapiPhilosophy__heading">The Solution (Después)</h2>
-          <p class="guapiPhilosophy__text">Un editor nodal con interfaz asimétrica que convierte el caos estructural en un ecosistema visual fluido y determinista.</p>
+          <h2 class="guapiPhilosophy__heading">The Solution (Gero)</h2>
+          <p class="guapiPhilosophy__text">Egituraren kaosa ekosistema bisual fluido eta determinista bihurtzen duen nodo-editorea, interfaze asimetrikoarekin.</p>
         </div>
       </section>
 
@@ -46,12 +46,12 @@
         </div>
         
         <div style="margin-top: 4rem;">
-            <a href="<?= url('es/contacto') ?>" class="guapiHero__cta">Solicitar Demo</a>
+            <a href="<?= url('eu/kontaktua') ?>" class="guapiHero__cta">Demoa Eskatu</a>
         </div>
       </section>
 
     </main>
 
-    <?php require app_path('includes/es/footer.php'); ?>
+    <?php require app_path('includes/eu/footer.php'); ?>
   </body>
 </html>

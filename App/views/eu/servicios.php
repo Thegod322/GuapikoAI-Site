@@ -1,21 +1,21 @@
 <!doctype html>
-<html lang="<?= e($lang ?? env('LANG_DEFAULT', 'es')) ?>">
+<html lang="<?= e($lang ?? env('LANG_DEFAULT', 'eu')) ?>">
   <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="<?= asset('favicon.svg') ?>">
-    <link rel="canonical" href="<?= url('/es/servicios') ?>">
-    <title>Nuestros Servicios | Guapiko AI Studio</title>
-    <meta name="description" content="Servicios de ingeniería de Inteligencia Artificial y agentes autónomos.">
+    <link rel="canonical" href="<?= url('/eu/zerbitzuak') ?>">
+    <title>Gure Zerbitzuak | Guapiko AI Studio</title>
+    <meta name="description" content="Adimen Artifizialaren ingeniaritza eta agente autonomoen zerbitzuak.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?= vite_tags($route['resources'] ?? null) ?>
   </head>
   <body>
-    <?php require app_path('includes/es/nav.php'); ?>
+    <?php require app_path('includes/eu/nav.php'); ?>
 
     <main>
       <section class="guapiPhilosophy reveal-up" style="min-height: 40vh;">
         <div class="guapiPhilosophy__content">
-          <h1 class="guapiPhilosophy__heading">Nuestros Servicios</h1>
+          <h1 class="guapiPhilosophy__heading">Gure Zerbitzuak</h1>
         </div>
       </section>
 
@@ -23,29 +23,29 @@
         <div class="guapiServices__list">
           
           <article class="art13">
-            <img src="<?= asset('assets/img/servicios/auditoria_ai.png') ?>" alt="Auditoría Quirúrgica AI">
+            <img src="<?= asset('assets/img/servicios/auditoria_ai.png') ?>" alt="Auditoria Kirurgikoa AI">
             <div>
-              <h3>Auditoría Quirúrgica AI</h3>
-              <p>Analizamos la viabilidad real de tu idea, identificamos cuellos de botella técnicos y diseñamos una arquitectura escalable antes de escribir una sola línea de código.</p>
-              <a href="<?= url('es/servicios/detalle') ?>" class="guapiHero__cta">Solicitar Auditoría</a>
+              <h3>Auditoria Kirurgikoa AI</h3>
+              <p>Zure ideiaren benetako bideragarritasuna aztertzen dugu, botila-lepo teknikoak identifikatzen ditugu eta arkitektura eskalagarria diseinatzen dugu kode lerro bakar bat idatzi aurretik.</p>
+              <a href="<?= url('eu/zerbitzuak/xehetasuna') ?>" class="guapiHero__cta">Auditoria Eskatu</a>
             </div>
           </article>
 
           <article class="art13 upsidedown">
-            <img src="<?= asset('assets/img/servicios/ecosistemas.png') ?>" alt="Ecosistemas Autónomos">
+            <img src="<?= asset('assets/img/servicios/ecosistemas.png') ?>" alt="Ekosistema Autonomoak">
             <div>
-              <h3>Ecosistemas Autónomos (Agentes)</h3>
-              <p>Implementamos flujos de trabajo basados en Inteligencia Artificial y agentes LLM que transforman la complejidad y el desorden en procesos silenciosos, deterministas y altamente eficientes.</p>
-              <a href="<?= url('es/servicios/detalle') ?>" class="guapiHero__cta">Ver Soluciones</a>
+              <h3>Ekosistema Autonomoak (Agenteak)</h3>
+              <p>Adimen Artifizialean eta LLM agenteetan oinarritutako lan-fluxuak ezartzen ditugu, konplexutasuna eta desordena prozesu isil, determinista eta oso eraginkor bihurtzeko.</p>
+              <a href="<?= url('eu/zerbitzuak/xehetasuna') ?>" class="guapiHero__cta">Ikusi Irtenbideak</a>
             </div>
           </article>
 
           <article class="art13">
             <img src="<?= asset('assets/img/servicios/launch_repair.png') ?>" alt="Launch & Repair">
             <div>
-              <h3>Lanzamiento y Reparación de Modelos</h3>
-              <p>Rescatamos prototipos atascados en el infierno del desarrollo y los llevamos a producción. Nos encargamos de la infraestructura, seguridad, optimización extrema y despliegue impecable en la nube.</p>
-              <a href="<?= url('es/servicios/detalle') ?>" class="guapiHero__cta">Iniciar Rescate</a>
+              <h3>Ereduen Abiaraztea eta Konponketa</h3>
+              <p>Garapenaren infernuan harrapatuta dauden prototipoak erreskatatu eta ekoizpenera eramaten ditugu. Azpiegituraz, segurtasunaz, optimizazio muturrekoaz eta hodeiko hedapen ezin hobeaz arduratzen gara.</p>
+              <a href="<?= url('eu/zerbitzuak/xehetasuna') ?>" class="guapiHero__cta">Erreskatea Hasi</a>
             </div>
           </article>
 
@@ -53,20 +53,36 @@
       </section>
 
       <!-- Workflow block -->
-      <section class="guapiPhilosophy reveal-up">
-        <div class="guapiPhilosophy__content">
-          <h2 class="guapiPhilosophy__heading" style="color: #ffffff;">Metodología</h2>
-          <div style="display: flex; justify-content: space-between; margin-top: 3rem; text-align: left; gap: 2rem; color: #a0a0a0;">
-            <div><strong style="color:#FF145A;">Fase 1:</strong><br>Auditoría Quirúrgica.</div>
-            <div><strong style="color:#FF145A;">Fase 2:</strong><br>Arquitectura Determinista.</div>
-            <div><strong style="color:#FF145A;">Fase 3:</strong><br>Ejecución Silenciosa.</div>
+      <section class="guapiServices reveal-up">
+        <div class="guapiServices__header" style="margin-bottom: 2rem;">
+          <h2 style="border-bottom: none;">Lan Metodologia</h2>
+          <p style="color: #a0a0a0; font-size: 1.2rem; margin-top: 1rem; max-width: 800px; line-height: 1.6;">
+            Ez dugu inprobisaziorako tarterik uzten. Proiektu bakoitzak pipeline zorrotz eta determinista bati jarraitzen dio, azken emaitzak merkatuaren itxaropenak gainditzen dituela ziurtatuz.
+          </p>
+        </div>
+        
+        <div class="metodologiaGrid">
+          <div class="metodologiaGrid__card">
+            <h3>1. Fasea: Auditoria Kirurgikoa</h3>
+            <p>Zure ideia desmuntatu eta osagai bakoitza aztertzen dugu. Benetako botila-lepo teknikoak identifikatzen ditugu kode lerro bakar bat idatzi aurretik.</p>
           </div>
-          <a href="<?= url('es/contacto') ?>" class="guapiHero__cta" style="margin-top: 4rem;">Solicitar Auditoría</a>
+          <div class="metodologiaGrid__card">
+            <h3>2. Fasea: Arkitektura Determinista</h3>
+            <p>Sistema asimetrikoak eta eskalagarriak diseinatzen ditugu. Kode lerro bakoitzak helburu argi bat du. Alferrikako mendekotasunik gabe, over-engineering gabe.</p>
+          </div>
+          <div class="metodologiaGrid__card">
+            <h3>3. Fasea: Exekuzio Isila</h3>
+            <p>Ekoizpenerako abiarazte inplacablea. Monitorizazio proaktiboa eta atzealdean 24/7 funtzionatzen duten IA ekosistemak, kalitatea ziurtatuz.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 4rem; width: 100%; text-align: center;">
+          <a href="<?= url('eu/kontaktua') ?>" class="guapiHero__cta">Auditoria Eskatu</a>
         </div>
       </section>
 
     </main>
 
-    <?php require app_path('includes/es/footer.php'); ?>
+    <?php require app_path('includes/eu/footer.php'); ?>
   </body>
 </html>
