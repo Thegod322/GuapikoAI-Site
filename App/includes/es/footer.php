@@ -25,20 +25,20 @@
     <section class="footer01__column" aria-labelledby="footer01-contact-title-es">
       <h2 class="footer01__title" id="footer01-contact-title-es">Contacto</h2>
       <address class="footer01__address">
-        <a class="footer01__link" href="tel:+34000000000">
-          <img class="footer01__icon" src="<?= asset('assets/img/icons/phone.svg') ?>" alt="">
-          <span>+34 000 000 000</span>
+        <a class="footer01__link" href="<?= env('PHONE_LINK', 'tel:+34000000000') ?>">
+          <img class="footer01__icon" src="<?= asset('assets/img/icons/phone.svg') ?>" alt="Icono de Teléfono" title="Llamar por teléfono">
+          <span><?= env('PHONE_TEXT', '+34 000 000 000') ?></span>
         </a>
-        <a class="footer01__link" href="mailto:hola@ejemplo.com">
-          <img class="footer01__icon" src="<?= asset('assets/img/icons/mail.svg') ?>" alt="">
-          <span>hola@ejemplo.com</span>
+        <a class="footer01__link" href="<?= env('EMAIL_LINK', 'mailto:hola@ejemplo.com') ?>">
+          <img class="footer01__icon" src="<?= asset('assets/img/icons/mail.svg') ?>" alt="Icono de Email" title="Enviar correo electrónico">
+          <span><?= env('EMAIL_TEXT', 'hola@ejemplo.com') ?></span>
         </a>
-        <a class="footer01__link" href="https://www.google.com/maps/search/?api=1&query=Calle+Ejemplo+1" target="_blank" rel="noopener noreferrer">
-          <img class="footer01__icon" src="<?= asset('assets/img/icons/map.svg') ?>" alt="">
+        <a class="footer01__link" href="<?= env('MAPS_LINK', 'https://www.google.com/maps/search/?api=1&query=Calle+Ejemplo+1') ?>" target="_blank" rel="noopener noreferrer">
+          <img class="footer01__icon" src="<?= asset('assets/img/icons/map.svg') ?>" alt="Icono de Mapa" title="Ver en el mapa">
           <span>Ver en Google Maps</span>
         </a>
         <p class="footer01__text">
-          <img class="footer01__icon" src="<?= asset('assets/img/icons/pin.svg') ?>" alt="">
+          <img class="footer01__icon" src="<?= asset('assets/img/icons/pin.svg') ?>" alt="Icono de Ubicación" title="Nuestra ubicación">
           <span>Calle Ejemplo 1, 00000 Ciudad</span>
         </p>
       </address>

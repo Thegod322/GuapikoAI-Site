@@ -14,7 +14,7 @@
     <?php require app_path('includes/es/nav.php'); ?>
     
     <header class="header01">
-      <img class="header01__media" src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix">
+      <img class="header01__media" src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
       <div class="header01__content">
         <p class="header01__eyebrow">Header 01</p>
         <h1>Showroom de resources</h1>
@@ -24,7 +24,7 @@
     </header>
 
     <header class="header02">
-        <img class="header02__media" src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix">
+        <img class="header02__media" src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
         <div class="header02__content">
         <p class="header02__eyebrow">Header 02</p>
         <h3 class="header02__title">Header 02</h3>
@@ -63,32 +63,32 @@
                   <span></span>
                   <div class="cards">
                       <div class="card">
-                          <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix">
+                          <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
                           <h4>Matrix ipsum 01</h4>
                           <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Neo eligendi veritatis codicem et simulacrum.</p>
                           <a href="" class="moduloBoton01">
                               <span>Módulo Botón 01</span>
-                              <img src="<?= asset('assets/img/icons/arrow-forward-outline.svg') ?>" alt="" title="">
+                              <img src="<?= asset('assets/img/icons/arrow-forward-outline.svg') ?>" alt="Icono de flecha" title="Continuar">
                           </a>
                       </div>
                       <div class="card">
-                          <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix">
+                          <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
                           <h4>Matrix ipsum 02</h4>
                           <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Morpheus quaerat optionem et realitatem.</p>
                           <a href="" class="moduloBoton01">
                               <span>Módulo Botón 01</span>
-                              <img src="<?= asset('assets/img/icons/arrow-forward-outline.svg') ?>" alt="" title="">
+                              <img src="<?= asset('assets/img/icons/arrow-forward-outline.svg') ?>" alt="Icono de flecha" title="Continuar">
                           </a>
                       </div>
                   </div>
                   <a href="" class="moduloBoton02">
                       <span>Módulo Botón 02</span>
-                      <img src="<?= asset('assets/img/icons/arrow-forward-outline.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/arrow-forward-outline.svg') ?>" alt="Icono de flecha" title="Continuar">
                   </a>
               </div>
               <!-- hijo 2 -->
               <div>
-                  <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix">
+                  <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
               </div>
           </article>
       </section>
@@ -103,28 +103,28 @@
           <div class="sect02-content">
               <ul>
                   <li>
-                      <a href="tel:+34943123123" title="Llámanos al 943 123 123" target="_blank">
-                          <img src="<?= asset('assets/img/icons/call.svg') ?>" alt="Llámanos al 943 123 123" title="Llámanos al 943 123 123" width="20" height="20">
-                          <span>943 123 123</span>
+                      <a href="<?= env('PHONE_LINK', 'tel:+34943123123') ?>" title="Llámanos al 943 123 123" target="_blank">
+                          <img src="<?= asset('assets/img/icons/phone.svg') ?>" alt="Llámanos al 943 123 123" title="Llámanos al 943 123 123" width="20" height="20">
+                          <span><?= env('PHONE_TEXT', '943 123 123') ?></span>
                       </a>
                   </li>
 
                   <li>
-                      <a href="https://api.whatsapp.com/send/?phone=34628749350" title="Escríbenos al whatsapp 600 123 123" target="_blank">
+                      <a href="<?= env('WHATSAPP_LINK', 'https://api.whatsapp.com/send/?phone=34628749350') ?>" title="Escríbenos al whatsapp 600 123 123" target="_blank">
                           <img src="<?= asset('assets/img/icons/logo-whatsapp.svg') ?>" alt="Escríbenos al whatsapp 600 123 123" title="Escríbenos al whatsapp 600 123 123" width="20" height="20">
                           <span>600 123 123</span>
                       </a>
                   </li>       
 
                   <li>
-                      <a href="mailto:aranaz@gmail.com" title="Mándanos un correo a la siguiente dirección correo@correo.com" target="_blank">
+                      <a href="<?= env('EMAIL_LINK', 'mailto:aranaz@gmail.com') ?>" title="Mándanos un correo a la siguiente dirección correo@correo.com" target="_blank">
                           <img src="<?= asset('assets/img/icons/mail-solid.svg') ?>" alt="Mándanos un correo a la siguiente dirección correo@correo.com" title="Mándanos un correo a la siguiente dirección correo@correo.com" width="20" height="20">
-                          <span>correo@correo.com</span>
+                          <span><?= env('EMAIL_TEXT', 'correo@correo.com') ?></span>
                       </a>
                   </li>
 
                   <li>
-                      <a href="https://maps.app.goo.gl/EB3bPiGW1yfoJg3p9" title="Estamos en Donostia en la dirección Paseo Portuetxe 23b, 413 Donostia" target="_blank">
+                      <a href="<?= env('MAPS_LINK', 'https://maps.app.goo.gl/EB3bPiGW1yfoJg3p9') ?>" title="Estamos en Donostia en la dirección Paseo Portuetxe 23b, 413 Donostia" target="_blank">
                           <img src="<?= asset('assets/img/icons/location.svg') ?>" alt="Estamos en Donostia en la dirección Paseo Portuetxe 23b, 413 Donostia" title="Estamos en Donostia en la dirección Paseo Portuetxe 23b, 413 Donostia" width="20" height="20">
                           <span>Paseo Portuetxe 23b<br>413 Donostia</span>
                       </a>
@@ -146,14 +146,14 @@
 
           <!-- Artículo 01 -->
           <article class="art01">
-              <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix">
+              <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
               <div>
                   <h3>Artículo 01</h3>
                   <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Neo eligendi veritatis codicem et simulacrum.</p>
                   <!-- <a href="" class="boton">CTA</a> -->
                   <a href="" class="moduloBoton02">
                       <span>Módulo Botón 02</span>
-                      <img src="<?= asset('assets/img/icons/arrow-forward-outline.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/arrow-forward-outline.svg') ?>" alt="Icono de flecha" title="Continuar">
                   </a>
               </div>
           </article>
@@ -167,14 +167,14 @@
                   <!-- <a href="" class="boton">Más info</a> -->
                   <a href="" class="moduloBoton02">
                       <span>Módulo Botón 02</span>
-                      <img src="<?= asset('assets/img/icons/arrow-forward-outline.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/arrow-forward-outline.svg') ?>" alt="Icono de flecha" title="Continuar">
                   </a>
               </div>
 
               <div class="imagenes">
-                  <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" title="">
-                  <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="">
-                  <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix" title="">
+                  <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
+                  <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
+                  <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
               </div>
 
           </article>
@@ -215,7 +215,7 @@
 
               <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Morpheus quaerat optionem et realitatem.</p>
 
-              <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="">
+              <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
 
           </article>
 
@@ -226,28 +226,28 @@
               <div class="contenedor-fichas">
                   <div class="ficha">
                       <h4>Matrix ipsum 01</h4>
-                      <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" title="">                        
+                      <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">                        
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Neo eligendi veritatis codicem et simulacrum.</p>
                       <span class="ralla"></span>
                   </div>
 
                   <div class="ficha">
                       <h4>Matrix ipsum 02</h4>
-                      <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix" title="">                        
+                      <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">                        
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Morpheus quaerat optionem et realitatem.</p>
                       <span class="ralla"></span>
                   </div>
 
                   <div class="ficha">
                       <h4>Matrix ipsum 03</h4>
-                      <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="">                        
+                      <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">                        
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Agent Smith erroribus reiciendis et systema.</p>
                       <span class="ralla"></span>
                   </div>
 
                   <div class="ficha">
                       <h4>Matrix ipsum 04</h4>
-                      <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix" title="">                        
+                      <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">                        
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Zion libertatem defendit contra machinas.</p>
                       <span class="ralla"></span>
                   </div>
@@ -288,8 +288,7 @@
               "
               src="<?= asset('assets/img/test/dummy_900.avif') ?>"
               width="900"
-              alt="" 
-              title="">
+              alt="Icono descriptivo" title="Elemento de interfaz">
 
               <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Neo eligendi veritatis codicem et simulacrum. Morpheus quaerat optionem, pillula rubra aperiam systema et realitatem.</p>
 
@@ -302,7 +301,7 @@
           <!-- articulo 08 -->
           <article class="art08">
               <h3>Artículo 08</h3>
-              <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix">
+              <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
               <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Neo eligendi veritatis codicem et simulacrum.</p>
               <a href="#" class="boton">CTA</a>
           </article>
@@ -318,23 +317,23 @@
                   <h4>Matrix ipsum columna 01</h4>
                   <ul>
                       <li>
-                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="Icono de verificación" title="Elemento completado">
                       <span>Matrix ipsum: pillula rubra.</span>
                       </li>
                       <li>
-                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="Icono de verificación" title="Elemento completado">
                       <span>Matrix ipsum: codex revelatus.</span>
                       </li>
                       <li>
-                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="Icono de verificación" title="Elemento completado">
                       <span>Matrix ipsum: Zion vigilat.</span>
                       </li>
                       <li>
-                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="Icono de verificación" title="Elemento completado">
                       <span>Matrix ipsum: Neo eligendi.</span>
                       </li>
                       <li>
-                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="Icono de verificación" title="Elemento completado">
                       <span>Matrix ipsum: machinae quaerunt.</span>
                       </li>
                   </ul>
@@ -344,23 +343,23 @@
                   <h4>Matrix ipsum columna 02</h4>
                   <ul>
                       <li>
-                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="Icono de verificación" title="Elemento completado">
                       <span>Matrix ipsum: simulacrum cadit.</span>
                       </li>
                       <li>
-                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="Icono de verificación" title="Elemento completado">
                       <span>Matrix ipsum: Morpheus respondet.</span>
                       </li>
                       <li>
-                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="Icono de verificación" title="Elemento completado">
                       <span>Matrix ipsum: Trinity navigat.</span>
                       </li>
                       <li>
-                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="Icono de verificación" title="Elemento completado">
                       <span>Matrix ipsum: Agent Smith advenit.</span>
                       </li>
                       <li>
-                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/checkmark-circle.svg') ?>" alt="Icono de verificación" title="Elemento completado">
                       <span>Matrix ipsum: realitas aperitur.</span>
                       </li>
                   </ul>
@@ -376,47 +375,47 @@
               <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Neo eligendi veritatis codicem et simulacrum. Morpheus quaerat optionem, pillula rubra aperiam systema et realitatem.</p>
               <div class="matrix-items">
                   <div class="ficha">
-                      <img src="<?= asset('assets/img/icons/home-solid.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/home-solid.svg') ?>" alt="Icono descriptivo" title="Elemento de interfaz">
                       <h4 class="sub-header">Matrix ipsum 01</h4>
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Neo eligendi veritatis codicem.</p>
                   </div>
                   <div class="ficha">
-                      <img src="<?= asset('assets/img/icons/garages.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/garages.svg') ?>" alt="Icono descriptivo" title="Elemento de interfaz">
                       <h4 class="sub-header">Matrix ipsum 02</h4>
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Morpheus quaerat optionem.</p>
                   </div>
                   <div class="ficha">
-                      <img src="<?= asset('assets/img/icons/furniture.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/furniture.svg') ?>" alt="Icono descriptivo" title="Elemento de interfaz">
                       <h4 class="sub-header">Matrix ipsum 03</h4>
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Pillula rubra aperiam systema.</p>
                   </div>
                   <div class="ficha">
-                      <img src="<?= asset('assets/img/icons/paint-tool.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/paint-tool.svg') ?>" alt="Icono descriptivo" title="Elemento de interfaz">
                       <h4 class="sub-header">Matrix ipsum 04</h4>
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Agent Smith erroribus reiciendis.</p>
                   </div>
                   <div class="ficha">
-                      <img src="<?= asset('assets/img/icons/tools-power-drill-sharp.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/tools-power-drill-sharp.svg') ?>" alt="Icono descriptivo" title="Elemento de interfaz">
                       <h4 class="sub-header">Matrix ipsum 05</h4>
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Zion libertatem defendit.</p>
                   </div>
                   <div class="ficha">
-                      <img src="<?= asset('assets/img/icons/stairs-arch.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/stairs-arch.svg') ?>" alt="Icono descriptivo" title="Elemento de interfaz">
                       <h4 class="sub-header">Matrix ipsum 06</h4>
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Machinae mundum regunt.</p>
                   </div>
                   <div class="ficha">
-                      <img src="<?= asset('assets/img/icons/business.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/business.svg') ?>" alt="Icono descriptivo" title="Elemento de interfaz">
                       <h4 class="sub-header">Matrix ipsum 07</h4>
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Simulacrum veritatem celat.</p>
                   </div>
                   <div class="ficha">
-                      <img src="<?= asset('assets/img/icons/house-check-fill.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/house-check-fill.svg') ?>" alt="Icono descriptivo" title="Elemento de interfaz">
                       <h4 class="sub-header">Matrix ipsum 08</h4>
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Codex realitatem mutat.</p>
                   </div>
                   <div class="ficha">
-                      <img src="<?= asset('assets/img/icons/thumbs-up-outline.svg') ?>" alt="" title="">
+                      <img src="<?= asset('assets/img/icons/thumbs-up-outline.svg') ?>" alt="Icono descriptivo" title="Elemento de interfaz">
                       <h4 class="sub-header">Matrix ipsum 09</h4>
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Neo systema transcendit.</p>
                   </div>
@@ -427,35 +426,35 @@
           <article class="art11">
               <h3>Artículo 11</h3>
               <div>
-                  <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix">
+                  <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
               </div>
 
               <div>
-                  <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix">
+                  <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
               </div>
 
               <div>
-                  <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix">
+                  <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
               </div>
 
               <div>
-                  <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix">
+                  <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
               </div>
 
               <div>
-                  <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix">
+                  <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
               </div>
 
               <div>
-                  <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix">
+                  <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
               </div>
 
               <div>
-                  <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix">
+                  <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
               </div>
 
               <div>
-                  <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix">
+                  <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
               </div>
 
           </article>
@@ -466,7 +465,7 @@
               <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Neo eligendi veritatis codicem et simulacrum. Morpheus quaerat optionem, pillula rubra aperiam systema et realitatem.</p>
               <div>
                   <div class="ficha">
-                  <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" title="">
+                  <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
                   <div>
                       <h4>Matrix ipsum 01</h4>
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -475,7 +474,7 @@
                   </div>
 
                   <div class="ficha">
-                  <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix" title="">
+                  <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
                   <div>
                       <h4>Matrix ipsum 02</h4>
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Morpheus quaerat optionem.</p>
@@ -484,7 +483,7 @@
                   </div>
 
                   <div class="ficha">
-                  <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="">
+                  <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
                   <div>
                       <h4>Matrix ipsum 03</h4>
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -493,7 +492,7 @@
                   </div>
 
                   <div class="ficha">
-                  <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix" title="">
+                  <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
                   <div>
                       <h4>Matrix ipsum 04</h4>
                       <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -507,8 +506,7 @@
           <!-- Artículo 13-->
           <article class="art13">
               <img
-                  alt="" 
-                  title=""
+                  alt="Icono descriptivo" title="Elemento de interfaz"
                   srcset="
                   <?= asset('assets/img/test/dummy_1800.avif') ?> 1800w,
                   <?= asset('assets/img/test/dummy_1200.avif') ?> 1200w
@@ -530,8 +528,7 @@
           <!-- Artículo 13 invertido -->
           <article class="art13 upsidedown">
               <img
-                  alt="" 
-                  title=""
+                  alt="Icono descriptivo" title="Elemento de interfaz"
                   srcset="
                   <?= asset('assets/img/test/dummy_1800.avif') ?> 1800w,
                   <?= asset('assets/img/test/dummy_1200.avif') ?> 1200w
@@ -553,8 +550,7 @@
           <!-- Artículo 13 -->
           <article class="art13">
               <img
-                  alt="" 
-                  title=""
+                  alt="Icono descriptivo" title="Elemento de interfaz"
                   srcset="
                   <?= asset('assets/img/test/dummy_1800.avif') ?> 1800w,
                   <?= asset('assets/img/test/dummy_1200.avif') ?> 1200w
@@ -581,7 +577,7 @@
               <div>
                   <div class="contenedor-form">
                   
-                  <img src="<?= asset('assets/img/icons/mail-solid.svg') ?>" alt="">
+                  <img src="<?= asset('assets/img/icons/mail-solid.svg') ?>" alt="Imagen genérica" title="Elemento visual">
                                   
 
                   <!-- MODAL QUE SALE CUANDO SE ENVÍA EL FORM CON ÉXITO -->
@@ -700,26 +696,26 @@
                   <div class="contenedor-info">
                   <ul>
                       <li>
-                      <a href="tel:+34943123123" target="_blank">
-                          <img src="<?= asset('assets/img/icons/tel.svg') ?>" alt="" title="">
-                          <span>943 123 123</span>
+                      <a href="<?= env('PHONE_LINK', 'tel:+34943123123') ?>" target="_blank">
+                          <img src="<?= asset('assets/img/icons/tel.svg') ?>" alt="Icono descriptivo" title="Elemento de interfaz">
+                          <span><?= env('PHONE_TEXT', '943 123 123') ?></span>
                       </a>
                       </li>
                       <li>
-                      <a href="mailto:aranaz@webda.eus" target="_blank">
-                          <img src="<?= asset('assets/img/icons/mail-solid.svg') ?>" alt="" title="">
-                          <span>aranaz@webda.eus</span>
+                      <a href="<?= env('EMAIL_LINK', 'mailto:aranaz@webda.eus') ?>" target="_blank">
+                          <img src="<?= asset('assets/img/icons/mail-solid.svg') ?>" alt="Icono descriptivo" title="Elemento de interfaz">
+                          <span><?= env('EMAIL_TEXT', 'aranaz@webda.eus') ?></span>
                       </a>
                       </li>
                       <li>
-                      <a href="https://wa.me/628749350" target="_blank">
-                          <img src="<?= asset('assets/img/icons/wa.svg') ?>" alt="" title="">
+                      <a href="<?= env('WHATSAPP_LINK', 'https://wa.me/628749350') ?>" target="_blank">
+                          <img src="<?= asset('assets/img/icons/wa.svg') ?>" alt="Icono descriptivo" title="Elemento de interfaz">
                           <span>628 749 350</span>
                       </a>
                       </li>
                       <li>
-                      <a href="https://maps.app.goo.gl/Kh7rZM3WF1chSZSj7" target="_blank">
-                          <img src="<?= asset('assets/img/icons/map-pin-solid.svg') ?>" alt="" title="">
+                      <a href="<?= env('MAPS_LINK', 'https://maps.app.goo.gl/Kh7rZM3WF1chSZSj7') ?>" target="_blank">
+                          <img src="<?= asset('assets/img/icons/map-pin-solid.svg') ?>" alt="Icono descriptivo" title="Elemento de interfaz">
                           <span>C/ Juan Fermín, Juan F. Gilisagasti Kalea, 4, 1º, 20018 Donostia / San Sebastián, Gipuzkoa</span>
                       </a>
                       </li>
@@ -741,7 +737,7 @@
           <div class="content">
             <h3>Artículo 14</h3>
             <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Neo eligendi veritatis codicem et simulacrum. Morpheus quaerat optionem, pillula rubra aperiam systema et realitatem. Agent Smith recusandae Zion, dum machinae architecto mundum regunt et Trinity viam demonstrat.</p>
-            <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix">
+            <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
           </div>
         </article>
 
@@ -758,42 +754,42 @@
             <a href="" class="item">
               <h4>Matrix ipsum 01</h4>
               <p>Neo eligendi veritatis codicem, dum pillula rubra realitatem aperit.</p>
-              <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" width="700" height="700">              
+              <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix" width="700" height="700">              
             </a>
 
             <a href="" class="item">
               <h4>Matrix ipsum 02</h4>
               <p>Morpheus quaerat optionem et Trinity per simulacrum navigat.</p>
-              <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix">
+              <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
             </a>
             
             <a href="" class="item">
               <h4>Matrix ipsum 03</h4>
               <p>Agent Smith codicem custodit, sed Zion machinis resistit.</p>
-              <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix">
+              <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
             </a>
           </div>
 
           <!-- ModulePersonal01 -->
           <div class="modulePersonal01">
             <div>
-              <img src="<?= asset('assets/img/icons/truck.svg') ?>" alt="">
+              <img src="<?= asset('assets/img/icons/truck.svg') ?>" alt="Imagen genérica" title="Elemento visual">
               <h4>modulePersonal01 · Item 01</h4>
             </div>
             <div>
-              <img src="<?= asset('assets/img/icons/tools.svg') ?>" alt="">
+              <img src="<?= asset('assets/img/icons/tools.svg') ?>" alt="Imagen genérica" title="Elemento visual">
               <h4>modulePersonal01 · Item 02</h4>
             </div>
             <div>
-              <img src="<?= asset('assets/img/icons/clip.svg') ?>" alt="">
+              <img src="<?= asset('assets/img/icons/clip.svg') ?>" alt="Imagen genérica" title="Elemento visual">
               <h4>modulePersonal01 · Item 03</h4>
             </div>
             <div>
-              <img src="<?= asset('assets/img/icons/bag.svg') ?>" alt="">
+              <img src="<?= asset('assets/img/icons/bag.svg') ?>" alt="Imagen genérica" title="Elemento visual">
               <h4>modulePersonal01 · Item 04</h4>
             </div>
             <div>
-              <img src="<?= asset('assets/img/icons/money.svg') ?>" alt="">
+              <img src="<?= asset('assets/img/icons/money.svg') ?>" alt="Imagen genérica" title="Elemento visual">
               <h4>modulePersonal01 · Item 05</h4>
             </div>
           </div>
@@ -808,7 +804,7 @@
               <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Neo eligendi veritatis codicem et simulacrum.</p>
               <p>Morpheus quaerat optionem, pillula rubra aperiam systema et realitatem. Trinity navigat dum Agent Smith codicem custodit.</p>
             </div>
-            <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix">
+            <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
           </div>
           <div class="contenedor">
             <div class="ficha">
@@ -863,7 +859,7 @@
           </div>
 
           <div>
-            <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix">
+            <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
           </div>
         </article>
 
@@ -881,7 +877,7 @@
           </div>
 
           <div>
-            <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix">
+            <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
           </div>
           
         </article>
@@ -900,7 +896,7 @@
           </div>
 
           <div>
-            <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix">
+            <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
           </div>
           
         </article>
@@ -919,7 +915,7 @@
           </div>
 
           <div>
-            <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix">
+            <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
           </div>
           
         </article>
@@ -935,16 +931,16 @@
                 <div class="artSlider01__pista">
                   <div class="artSlider01__slide">
                     <h3>Matrix ipsum 01</h3>
-                    <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix">
+                    <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
                   </div>
                   <div class="artSlider01__slide">
                     <h3>Matrix ipsum 02</h3>
-                    <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix">
+                    <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
                   </div>
 
                   <div class="artSlider01__slide">
                     <h3>Matrix ipsum 03</h3>
-                    <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix">
+                    <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
                   </div>
                 </div>
             </div>
@@ -965,22 +961,22 @@
 
         <article class="artGrid">
           <div>
-            <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix">
+            <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
           </div>
           <div>
-            <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix">
+            <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
           </div>
           <div>
-            <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix">
+            <img src="<?= asset('assets/img/test/dummy03.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
           </div>
           <div>
-            <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix">
+            <img src="<?= asset('assets/img/test/dummy04.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
           </div>
           <div>
-            <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix">
+            <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
           </div>
           <div>
-            <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix">
+            <img src="<?= asset('assets/img/test/dummy02.avif') ?>" alt="Escena de Matrix" title="Imagen ilustrativa de Matrix">
           </div>
         </article>
 
@@ -988,24 +984,24 @@
         <div class="modulePersonal01">
           <div>
             <h4 data-lang>modulePersonal01 · Item 01</h4>
-            <img src="<?= asset('assets/img/icons/truck.svg') ?>" alt="">
+            <img src="<?= asset('assets/img/icons/truck.svg') ?>" alt="Imagen genérica" title="Elemento visual">
             
           </div>
           <div>
             <h4>modulePersonal01 · Item 02</h4>
-            <img src="<?= asset('assets/img/icons/tools.svg') ?>" alt="">
+            <img src="<?= asset('assets/img/icons/tools.svg') ?>" alt="Imagen genérica" title="Elemento visual">
           </div>
           <div>
             <h4>modulePersonal01 · Item 03</h4>
-            <img src="<?= asset('assets/img/icons/clip.svg') ?>" alt="">
+            <img src="<?= asset('assets/img/icons/clip.svg') ?>" alt="Imagen genérica" title="Elemento visual">
           </div>
           <div>
             <h4>modulePersonal01 · Item 04</h4>
-            <img src="<?= asset('assets/img/icons/bag.svg') ?>" alt="">
+            <img src="<?= asset('assets/img/icons/bag.svg') ?>" alt="Imagen genérica" title="Elemento visual">
           </div>
           <div>
             <h4>modulePersonal01 · Item 05</h4>
-            <img src="<?= asset('assets/img/icons/money.svg') ?>" alt="">
+            <img src="<?= asset('assets/img/icons/money.svg') ?>" alt="Imagen genérica" title="Elemento visual">
           </div>
         </div>
 

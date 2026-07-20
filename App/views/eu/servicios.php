@@ -23,7 +23,7 @@
         <div class="guapiServices__list">
           
           <article class="art13">
-            <img src="<?= asset('assets/img/servicios/auditoria_ai.png') ?>" alt="Auditoria Kirurgikoa AI">
+            <img src="<?= asset('assets/img/servicios/auditoria_ai.png') ?>" alt="Auditoria Kirurgikoa AI" title="Auditoria Kirurgikoa AI Zerbitzua">
             <div>
               <h3>Auditoria Kirurgikoa AI</h3>
               <p>Zure ideiaren benetako bideragarritasuna aztertzen dugu, botila-lepo teknikoak identifikatzen ditugu eta arkitektura eskalagarria diseinatzen dugu kode lerro bakar bat idatzi aurretik.</p>
@@ -32,7 +32,7 @@
           </article>
 
           <article class="art13 upsidedown">
-            <img src="<?= asset('assets/img/servicios/ecosistemas.png') ?>" alt="Ekosistema Autonomoak">
+            <img src="<?= asset('assets/img/servicios/ecosistemas.png') ?>" alt="Ekosistema Autonomoak IA" title="Adimen Artifizialeko Ekosistema Autonomoen Garapena">
             <div>
               <h3>Ekosistema Autonomoak (Agenteak)</h3>
               <p>Adimen Artifizialean eta LLM agenteetan oinarritutako lan-fluxuak ezartzen ditugu, konplexutasuna eta desordena prozesu isil, determinista eta oso eraginkor bihurtzeko.</p>
@@ -41,7 +41,7 @@
           </article>
 
           <article class="art13">
-            <img src="<?= asset('assets/img/servicios/launch_repair.png') ?>" alt="Launch & Repair">
+            <img src="<?= asset('assets/img/servicios/launch_repair.png') ?>" alt="Ereduen Abiaraztea eta Konponketa" title="IA Ereduen Launch & Repair Zerbitzua">
             <div>
               <h3>Ereduen Abiaraztea eta Konponketa</h3>
               <p>Garapenaren infernuan harrapatuta dauden prototipoak erreskatatu eta ekoizpenera eramaten ditugu. Azpiegituraz, segurtasunaz, optimizazio muturrekoaz eta hodeiko hedapen ezin hobeaz arduratzen gara.</p>

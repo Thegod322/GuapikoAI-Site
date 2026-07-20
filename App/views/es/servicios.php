@@ -23,7 +23,7 @@
         <div class="guapiServices__list">
           
           <article class="art13">
-            <img src="<?= asset('assets/img/servicios/auditoria_ai.png') ?>" alt="Auditoría Quirúrgica AI">
+            <img src="<?= asset('assets/img/servicios/auditoria_ai.png') ?>" alt="Auditoría Quirúrgica AI" title="Servicio de Auditoría Quirúrgica AI">
             <div>
               <h3>Auditoría Quirúrgica AI</h3>
               <p>Analizamos la viabilidad real de tu idea, identificamos cuellos de botella técnicos y diseñamos una arquitectura escalable antes de escribir una sola línea de código.</p>
@@ -32,7 +32,7 @@
           </article>
 
           <article class="art13 upsidedown">
-            <img src="<?= asset('assets/img/servicios/ecosistemas.png') ?>" alt="Ecosistemas Autónomos">
+            <img src="<?= asset('assets/img/servicios/ecosistemas.png') ?>" alt="Ecosistemas Autónomos de IA" title="Desarrollo de Ecosistemas Autónomos de Inteligencia Artificial">
             <div>
               <h3>Ecosistemas Autónomos (Agentes)</h3>
               <p>Implementamos flujos de trabajo basados en Inteligencia Artificial y agentes LLM que transforman la complejidad y el desorden en procesos silenciosos, deterministas y altamente eficientes.</p>
@@ -41,7 +41,7 @@
           </article>
 
           <article class="art13">
-            <img src="<?= asset('assets/img/servicios/launch_repair.png') ?>" alt="Launch & Repair">
+            <img src="<?= asset('assets/img/servicios/launch_repair.png') ?>" alt="Lanzamiento y Reparación de Modelos" title="Servicio Launch & Repair de Modelos de IA">
             <div>
               <h3>Lanzamiento y Reparación de Modelos</h3>
               <p>Rescatamos prototipos atascados en el infierno del desarrollo y los llevamos a producción. Nos encargamos de la infraestructura, seguridad, optimización extrema y despliegue impecable en la nube.</p>

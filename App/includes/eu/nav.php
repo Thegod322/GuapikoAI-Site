@@ -5,7 +5,7 @@
 <nav class="nav01" data-nav01>
   <div class="nav01__inner">
     <a class="nav01__brand" href="/eu" aria-label="Joan hasierara">
-      <img src="<?= asset('assets/img/logos/GuapiLogo.svg') ?>" class="nav01__logo" alt="Guapiko AI Studio">
+      <img src="<?= asset('assets/img/logos/GuapiLogo.svg') ?>" class="nav01__logo" alt="Guapiko AI Studio Logotipoa" title="Guapiko AI Studio Hasiera">
       <span class="nav01__brandText">GUAPIKO.</span>
     </a>
 

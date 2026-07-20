@@ -25,37 +25,37 @@
         <div class="guapiPortfolio__grid">
           
           <a href="<?= url('eu/kasu-arrakastatsuak/xehetasuna') ?>" class="guapiPortfolio__item">
-            <img src="<?= asset('assets/img/portfolio/mdd_editor.png') ?>" alt="MDD-Editor">
+            <img src="<?= asset('assets/img/portfolio/mdd_editor.png') ?>" alt="MDD-Editor" title="MDD Diseinuko Geruza Anitzeko Editorea">
             <div class="guapiPortfolio__overlay">
               <h3 class="guapiPortfolio__title">MDD-Editor</h3>
             </div>
           </a>
           <a href="<?= url('eu/kasu-arrakastatsuak/xehetasuna') ?>" class="guapiPortfolio__item">
-            <img src="<?= asset('assets/img/portfolio/waifu_capitalist.png') ?>" alt="Proiektua 2">
+            <img src="<?= asset('assets/img/portfolio/waifu_capitalist.png') ?>" alt="Nutaku Waifu Capitalist" title="Nutaku Waifu Capitalist Proiektua">
             <div class="guapiPortfolio__overlay">
               <h3 class="guapiPortfolio__title">Nutaku Waifu Capitalist</h3>
             </div>
           </a>
           <a href="<?= url('eu/kasu-arrakastatsuak/xehetasuna') ?>" class="guapiPortfolio__item">
-            <img src="<?= asset('assets/img/portfolio/farm_capitalist.png') ?>" alt="Proiektua 3">
+            <img src="<?= asset('assets/img/portfolio/farm_capitalist.png') ?>" alt="CrazyGames Farm Capitalist" title="CrazyGames Farm Capitalist Proiektua">
             <div class="guapiPortfolio__overlay">
               <h3 class="guapiPortfolio__title">CrazyGames Farm Capitalist</h3>
             </div>
           </a>
           <a href="<?= url('eu/kasu-arrakastatsuak/xehetasuna') ?>" class="guapiPortfolio__item">
-            <img src="<?= asset('assets/img/portfolio/graboid_run.png') ?>" alt="Proiektua 4">
+            <img src="<?= asset('assets/img/portfolio/graboid_run.png') ?>" alt="Graboid Run" title="Graboid Run Jokoa">
             <div class="guapiPortfolio__overlay">
               <h3 class="guapiPortfolio__title">Graboid Run</h3>
             </div>
           </a>
           <a href="<?= url('eu/kasu-arrakastatsuak/xehetasuna') ?>" class="guapiPortfolio__item">
-            <img src="<?= asset('assets/img/portfolio/guapiko_studio.png') ?>" alt="Proiektua 5">
+            <img src="<?= asset('assets/img/portfolio/guapiko_studio.png') ?>" alt="Guapiko AI Studio" title="Guapiko AI Studio Plataforma">
             <div class="guapiPortfolio__overlay">
               <h3 class="guapiPortfolio__title">Guapiko AI Studio</h3>
             </div>
           </a>
           <a href="<?= url('eu/kasu-arrakastatsuak/xehetasuna') ?>" class="guapiPortfolio__item">
-            <img src="<?= asset('assets/img/portfolio/proyecto_alpha.png') ?>" alt="Proiektua 6">
+            <img src="<?= asset('assets/img/portfolio/proyecto_alpha.png') ?>" alt="Alpha Proiektua" title="Alpha Proiektuaren Garapena">
             <div class="guapiPortfolio__overlay">
               <h3 class="guapiPortfolio__title">Alpha Proiektua</h3>
             </div>
