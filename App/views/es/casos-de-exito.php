@@ -21,13 +21,44 @@
       </section>
 
       <!-- Asymmetric Grid -->
-      <section class="guapiServices reveal-up">
-        <div class="guapiServices__grid">
+      <section class="guapiPortfolio reveal-up">
+        <div class="guapiPortfolio__grid">
           
-          <a href="<?= url('es/casos-de-exito/detalle') ?>" class="guapiServices__card">
-            <h3>MDD-Editor</h3>
-            <p style="color: #FF145A; font-weight: bold; margin-bottom: 1rem; font-size: 0.9rem;">AI Pipeline & Graph Architecture</p>
-            <p>Orquestación de agentes LLM mediante una topología compleja y flujos de datos masivos.</p>
+          <a href="<?= url('es/casos-de-exito/detalle') ?>" class="guapiPortfolio__item">
+            <img src="<?= asset('assets/img/portfolio/mdd_editor.png') ?>" alt="MDD-Editor">
+            <div class="guapiPortfolio__overlay">
+              <h3 class="guapiPortfolio__title">MDD-Editor</h3>
+            </div>
+          </a>
+          <a href="<?= url('es/casos-de-exito/detalle') ?>" class="guapiPortfolio__item">
+            <img src="<?= asset('assets/img/portfolio/waifu_capitalist.png') ?>" alt="Proyecto 2">
+            <div class="guapiPortfolio__overlay">
+              <h3 class="guapiPortfolio__title">Nutaku Waifu Capitalist</h3>
+            </div>
+          </a>
+          <a href="<?= url('es/casos-de-exito/detalle') ?>" class="guapiPortfolio__item">
+            <img src="<?= asset('assets/img/portfolio/farm_capitalist.png') ?>" alt="Proyecto 3">
+            <div class="guapiPortfolio__overlay">
+              <h3 class="guapiPortfolio__title">CrazyGames Farm Capitalist</h3>
+            </div>
+          </a>
+          <a href="<?= url('es/casos-de-exito/detalle') ?>" class="guapiPortfolio__item">
+            <img src="<?= asset('assets/img/portfolio/graboid_run.png') ?>" alt="Proyecto 4">
+            <div class="guapiPortfolio__overlay">
+              <h3 class="guapiPortfolio__title">Graboid Run</h3>
+            </div>
+          </a>
+          <a href="<?= url('es/casos-de-exito/detalle') ?>" class="guapiPortfolio__item">
+            <img src="<?= asset('assets/img/portfolio/guapiko_studio.png') ?>" alt="Proyecto 5">
+            <div class="guapiPortfolio__overlay">
+              <h3 class="guapiPortfolio__title">Guapiko AI Studio</h3>
+            </div>
+          </a>
+          <a href="<?= url('es/casos-de-exito/detalle') ?>" class="guapiPortfolio__item">
+            <img src="<?= asset('assets/img/portfolio/proyecto_alpha.png') ?>" alt="Proyecto 6">
+            <div class="guapiPortfolio__overlay">
+              <h3 class="guapiPortfolio__title">Proyecto Alpha</h3>
+            </div>
           </a>
 
         </div>

@@ -165,14 +165,15 @@ function vite_tags(?string $resources): string
         return '';
     }
 
-    $assetBase = rtrim((string) env('RUTA', 'http://localhost:5173'), '/');
+    $assetBase = rtrim((string) env('RUTA', ''), '/');
     $entry = ltrim($resources, '/');
     $environment = env('APP_ENV', 'development');
 
     if ($environment === 'development') {
+        $viteServer = 'http://localhost:5173';
         return implode(PHP_EOL, [
-            '<script type="module" src="' . e($assetBase . '/@vite/client') . '"></script>',
-            '<script type="module" src="' . e($assetBase . '/' . $entry) . '"></script>',
+            '<script type="module" src="' . e($viteServer . '/@vite/client') . '"></script>',
+            '<script type="module" src="' . e($viteServer . '/' . $entry) . '"></script>',
         ]);
     }
 

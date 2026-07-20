@@ -1011,8 +1011,38 @@
 
       </section>
 
-      
-
+      <section id="showroom-guapiobras">
+        <h2>Componente Obras Maestras (guapiObras)</h2>
+        <div class="guapiObras">
+          <div class="guapiObras__header">
+            <h2>Obras Maestras</h2>
+            <p>Precisión. Escalabilidad. Estética asimétrica. Casos reales donde nuestra arquitectura habla por sí misma.</p>
+          </div>
+          
+          <div class="guapiObras__grid">
+            <a href="#" class="guapiObras__card">
+              <h3>Proyecto Alpha</h3>
+              <p>Descripción corta de la arquitectura implementada y resultados asimétricos.</p>
+            </a>
+            <a href="#" class="guapiObras__card">
+              <h3>Proyecto Beta</h3>
+              <p>Descripción corta de la arquitectura implementada y resultados asimétricos.</p>
+            </a>
+            <a href="#" class="guapiObras__card">
+              <h3>Proyecto Gamma</h3>
+              <p>Descripción corta de la arquitectura implementada y resultados asimétricos.</p>
+            </a>
+            <a href="#" class="guapiObras__card">
+              <h3>Proyecto Delta</h3>
+              <p>Descripción corta de la arquitectura implementada y resultados asimétricos.</p>
+            </a>
+          </div>
+          
+          <div class="guapiObras__footer">
+            <a href="#" class="guapiHero__cta">Ver casos de éxito</a>
+          </div>
+        </div>
+      </section>
       
     </main>
 

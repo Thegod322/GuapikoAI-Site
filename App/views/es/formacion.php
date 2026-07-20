@@ -20,19 +20,36 @@
         </div>
       </section>
 
-      <section class="guapiServices reveal-up">
-        <div class="guapiServices__grid">
+      <section class="guapiCursos reveal-up">
+        <div class="guapiCursos__grid">
           
-          <a href="<?= url('es/formacion/detalle') ?>" class="guapiServices__card">
+          <a href="<?= url('es/formacion/detalle') ?>" class="guapiCursos__card">
             <h3>Arquitectura de Agentes IA</h3>
             <p style="color: #FF145A; font-weight: bold; margin-bottom: 1rem; font-size: 0.9rem;">Curso Técnico Avanzado</p>
             <p>Integración de Agentes LLM. La diferencia entre la teoría vacía y la ingeniería real aplicable hoy.</p>
           </a>
 
-        </div>
-        
-        <div style="margin-top: 4rem; width: 100%; text-align: center;">
-          <a href="<?= url('es/formacion/detalle') ?>" class="guapiHero__cta">Acceder al conocimiento</a>
+          <!-- Highlight 2 -->
+          <a href="<?= url('es/formacion/detalle') ?>" class="guapiCursos__card">
+            <h3>Ingeniería de Prompts</h3>
+            <p style="color: #FF145A; font-weight: bold; margin-bottom: 1rem; font-size: 0.9rem;">Workshop Práctico</p>
+            <p>Técnicas avanzadas para maximizar el razonamiento y la creatividad de los modelos fundacionales.</p>
+          </a>
+
+          <!-- Highlight 3 -->
+          <a href="<?= url('es/formacion/detalle') ?>" class="guapiCursos__card">
+            <h3>Visión Computacional</h3>
+            <p style="color: #FF145A; font-weight: bold; margin-bottom: 1rem; font-size: 0.9rem;">Masterclass</p>
+            <p>Sistemas de percepción visual, OCR, y análisis en tiempo real para aplicaciones industriales.</p>
+          </a>
+
+          <!-- Highlight 4 -->
+          <a href="<?= url('es/formacion/detalle') ?>" class="guapiCursos__card">
+            <h3>RAG Empresarial</h3>
+            <p style="color: #FF145A; font-weight: bold; margin-bottom: 1rem; font-size: 0.9rem;">Especialización</p>
+            <p>Retrieval-Augmented Generation con bases de datos vectoriales para empresas de alto rendimiento.</p>
+          </a>
+
         </div>
       </section>
 

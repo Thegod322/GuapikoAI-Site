@@ -35,26 +35,36 @@
       </section>
 
       <!-- Portfolio Highlight -->
-      <section class="guapiServices reveal-up">
-        <div class="guapiServices__header">
+      <section class="guapiObras reveal-up">
+        <div class="guapiObras__header">
           <h2>Obras Maestras</h2>
-          <p style="color: #a0a0a0; margin-top: 1rem; font-size: 1.2rem;">Precisión. Escalabilidad. Estética asimétrica. Casos reales donde nuestra arquitectura habla por sí misma.</p>
+          <p>Precisión. Escalabilidad. Estética asimétrica. Casos reales donde nuestra arquitectura habla por sí misma.</p>
         </div>
         
-        <div class="guapiServices__grid">
+        <div class="guapiObras__grid">
           <!-- Dummy highlight 1 -->
-          <a href="<?= url('es/casos-de-exito') ?>" class="guapiServices__card">
+          <a href="<?= url('es/casos-de-exito') ?>" class="guapiObras__card">
             <h3>MDD-Editor</h3>
             <p>AI Pipeline & Graph Architecture. Un editor nodal con interfaz asimétrica que convierte el caos estructural en un ecosistema visual fluido.</p>
           </a>
           <!-- Dummy highlight 2 -->
-          <a href="<?= url('es/casos-de-exito') ?>" class="guapiServices__card">
+          <a href="<?= url('es/casos-de-exito') ?>" class="guapiObras__card">
             <h3>Farm Capitalist</h3>
             <p>Orquestación asimétrica y optimización matemática profunda en motores de juego integrados con IA.</p>
           </a>
+          <!-- Dummy highlight 3 -->
+          <a href="<?= url('es/casos-de-exito') ?>" class="guapiObras__card">
+            <h3>Waifu Capitalist</h3>
+            <p>Economía asimétrica y diseño de sistemas complejos orientados a la retención profunda de usuarios.</p>
+          </a>
+          <!-- Dummy highlight 4 -->
+          <a href="<?= url('es/casos-de-exito') ?>" class="guapiObras__card">
+            <h3>Graboid Run</h3>
+            <p>IA de navegación (Worm AI), pathfinding dinámico y arquitectura de físicas integradas en tiempo real.</p>
+          </a>
         </div>
         
-        <div style="margin-top: 4rem; width: 100%; text-align: center;">
+        <div class="guapiObras__footer">
           <a href="<?= url('es/casos-de-exito') ?>" class="guapiHero__cta">Ver casos de éxito</a>
         </div>
       </section>

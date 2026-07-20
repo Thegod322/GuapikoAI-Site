@@ -98,7 +98,8 @@ h1{
     text-align: center;     
     color: $color02;
     letter-spacing: 10px;
-    width: 90%;    
+    width: 90%;
+    text-transform: uppercase;
 }
 h2{
     color: $color01bis;
@@ -183,6 +184,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    overflow-x: hidden;
 }
 
 header, nav, main, footer, section{

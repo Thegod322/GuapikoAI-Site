@@ -46,7 +46,7 @@
         </div>
         
         <div style="margin-top: 4rem;">
-            <a href="#" class="guapiHero__cta">Ver el proyecto en vivo</a>
+            <a href="<?= url('es/contacto') ?>" class="guapiHero__cta">Solicitar Demo</a>
         </div>
       </section>
 

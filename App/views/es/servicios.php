@@ -20,36 +20,64 @@
       </section>
 
       <section class="guapiServices reveal-up">
-        <div class="guapiServices__grid">
+        <div class="guapiServices__list">
           
-          <a href="<?= url('es/servicios/detalle') ?>" class="guapiServices__card">
-            <h3>Launch & Repair</h3>
-            <p>Rescatamos prototipos estancados y los llevamos a producción. Infraestructura, optimización y despliegue impecable.</p>
-          </a>
+          <article class="art13">
+            <img src="<?= asset('assets/img/servicios/auditoria_ai.png') ?>" alt="Auditoría Quirúrgica AI">
+            <div>
+              <h3>Auditoría Quirúrgica AI</h3>
+              <p>Analizamos la viabilidad real de tu idea, identificamos cuellos de botella técnicos y diseñamos una arquitectura escalable antes de escribir una sola línea de código.</p>
+              <a href="<?= url('es/servicios/detalle') ?>" class="guapiHero__cta">Solicitar Auditoría</a>
+            </div>
+          </article>
 
-          <a href="<?= url('es/servicios/detalle') ?>" class="guapiServices__card">
-            <h3>Ecosistemas Autónomos</h3>
-            <p>Implementamos agentes LLM que transforman la complejidad en flujos de trabajo silenciosos y eficientes.</p>
-          </a>
+          <article class="art13 upsidedown">
+            <img src="<?= asset('assets/img/servicios/ecosistemas.png') ?>" alt="Ecosistemas Autónomos">
+            <div>
+              <h3>Ecosistemas Autónomos (Agentes)</h3>
+              <p>Implementamos flujos de trabajo basados en Inteligencia Artificial y agentes LLM que transforman la complejidad y el desorden en procesos silenciosos, deterministas y altamente eficientes.</p>
+              <a href="<?= url('es/servicios/detalle') ?>" class="guapiHero__cta">Ver Soluciones</a>
+            </div>
+          </article>
 
-          <a href="<?= url('es/servicios/detalle') ?>" class="guapiServices__card">
-            <h3>IA a Medida</h3>
-            <p>Arquitecturas de inteligencia artificial diseñadas específicamente para acoplarse a la lógica profunda de tu negocio.</p>
-          </a>
+          <article class="art13">
+            <img src="<?= asset('assets/img/servicios/launch_repair.png') ?>" alt="Launch & Repair">
+            <div>
+              <h3>Lanzamiento y Reparación de Modelos</h3>
+              <p>Rescatamos prototipos atascados en el infierno del desarrollo y los llevamos a producción. Nos encargamos de la infraestructura, seguridad, optimización extrema y despliegue impecable en la nube.</p>
+              <a href="<?= url('es/servicios/detalle') ?>" class="guapiHero__cta">Iniciar Rescate</a>
+            </div>
+          </article>
 
         </div>
       </section>
 
       <!-- Workflow block -->
-      <section class="guapiPhilosophy reveal-up">
-        <div class="guapiPhilosophy__content">
-          <h2 class="guapiPhilosophy__heading" style="color: #ffffff;">Metodología</h2>
-          <div style="display: flex; justify-content: space-between; margin-top: 3rem; text-align: left; gap: 2rem; color: #a0a0a0;">
-            <div><strong style="color:#FF145A;">Fase 1:</strong><br>Auditoría Quirúrgica.</div>
-            <div><strong style="color:#FF145A;">Fase 2:</strong><br>Arquitectura Determinista.</div>
-            <div><strong style="color:#FF145A;">Fase 3:</strong><br>Ejecución Silenciosa.</div>
+      <section class="guapiServices reveal-up">
+        <div class="guapiServices__header" style="margin-bottom: 2rem;">
+          <h2 style="border-bottom: none;">Metodología de Trabajo</h2>
+          <p style="color: #a0a0a0; font-size: 1.2rem; margin-top: 1rem; max-width: 800px; line-height: 1.6;">
+            No dejamos espacio para la improvisación. Cada proyecto sigue un pipeline riguroso y determinista, asegurando que el resultado final supere las expectativas del mercado.
+          </p>
+        </div>
+        
+        <div class="metodologiaGrid">
+          <div class="metodologiaGrid__card">
+            <h3>Fase 1: Auditoría Quirúrgica</h3>
+            <p>Desmontamos tu idea y analizamos cada componente. Identificamos los verdaderos cuellos de botella técnicos antes de escribir una sola línea de código.</p>
           </div>
-          <a href="<?= url('es/contacto') ?>" class="guapiHero__cta" style="margin-top: 4rem;">Solicitar Auditoría</a>
+          <div class="metodologiaGrid__card">
+            <h3>Fase 2: Arquitectura Determinista</h3>
+            <p>Diseñamos sistemas asimétricos y escalables. Cada línea de código tiene un propósito claro. Sin dependencias inútiles, sin over-engineering.</p>
+          </div>
+          <div class="metodologiaGrid__card">
+            <h3>Fase 3: Ejecución Silenciosa</h3>
+            <p>Lanzamiento a producción implacable. Monitorización proactiva y ecosistemas de IA que operan 24/7 en segundo plano asegurando la calidad.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 4rem; width: 100%; text-align: center;">
+          <a href="<?= url('es/contacto') ?>" class="guapiHero__cta">Solicitar Auditoría</a>
         </div>
       </section>
 

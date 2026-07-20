@@ -1,0 +1,127 @@
+@use "../resources/config" as c;
+
+.guapiPortfolio {
+  width: 100%;
+  padding: 4rem 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: c.$bg-dark;
+
+  &__grid {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+    grid-template-areas:
+      'area01'
+      'area02'
+      'area03'
+      'area04'
+      'area05'
+      'area06';
+
+    @media only screen and (min-width: c.$tablet) {
+      width: 100%;
+      grid-auto-rows: 50dvh;
+      grid-template-areas:
+        'area01 area01'
+        'area02 area03'
+        'area04 area04'
+        'area05 area06';
+    }
+
+    @media only screen and (min-width: c.$desktop) {
+      grid-auto-rows: 50dvh;
+      grid-template-areas:
+        'area01 area01 area02 area02'
+        'area03 area04 area04 area05'
+        'area03 area04 area04 area06';
+    }
+  }
+
+@keyframes borderGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+  &__item {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    border-radius: 5px;
+    @include c.accent-glow-hover(0px, 0.4);
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      border: 1px solid transparent;
+      background: linear-gradient(60deg, c.$bg-dark, c.$accent-red, c.$bg-dark, c.$accent-red) border-box;
+      background-size: 300% 300%;
+      -webkit-mask:
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      animation: borderGradient 15s ease infinite;
+      z-index: 2;
+      transition: background 0.3s ease;
+    }
+
+    &:hover::after {
+      background: c.$accent-red border-box;
+      animation: none;
+    }
+
+    &:nth-of-type(1) { grid-area: area01; }
+    &:nth-of-type(2) { grid-area: area02; }
+    &:nth-of-type(3) { grid-area: area03; }
+    &:nth-of-type(4) { grid-area: area04; }
+    &:nth-of-type(5) { grid-area: area05; }
+    &:nth-of-type(6) { grid-area: area06; }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+
+    .guapiPortfolio__overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%; // to give enough room for the gradient
+      background: linear-gradient(to top, rgba(16, 16, 16, 0.9) 0%, rgba(16, 16, 16, 0) 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+      pointer-events: none; // ensure it doesn't block hover
+    }
+
+    .guapiPortfolio__title {
+      color: c.$text-light;
+      font-size: 1.5rem;
+      font-family: c.$fuenteTitulos;
+      margin: 0;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+      transition: color 0.3s ease;
+    }
+
+    &:hover .guapiPortfolio__title {
+      color: c.$accent-red; // adds a nice touch on hover
+    }
+  }
+}

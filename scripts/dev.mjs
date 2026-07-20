@@ -4,7 +4,7 @@ const cwd = process.cwd();
 const env = {
   ...process.env,
   APP_ENV: process.env.APP_ENV ?? "development",
-  RUTA: process.env.RUTA ?? "http://localhost:5173",
+  RUTA: process.env.RUTA ?? "http://localhost:3000",
   LANG_DEFAULT: process.env.LANG_DEFAULT ?? "es",
 };
 

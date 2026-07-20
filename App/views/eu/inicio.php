@@ -14,7 +14,7 @@
     <?php require app_path('includes/eu/nav.php'); ?>
 
     <header class="header01">
-      <img class="header01__media" src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix">
+      <img class="header01__media" src="<?= asset('assets/img/hero/hero_ai_one.png') ?>" alt="Escena de Matrix">
       <div class="header01__content">
         <p class="header01__eyebrow">Header 01</p>
         <h1>Showroom de resources</h1>
@@ -32,7 +32,7 @@
           <div class="content">
             <h2>Presentación de la empresa</h2>
             <p>Matrix ipsum dolor sit amet, consectetur adipisicing elit. Neo eligendi veritatis codicem et simulacrum. Morpheus quaerat optionem, pillula rubra aperiam systema et realitatem. Agent Smith recusandae Zion, dum machinae architecto mundum regunt et Trinity viam demonstrat.</p>
-            <img src="<?= asset('assets/img/test/dummy01.avif') ?>" alt="Escena de Matrix">
+            <img src="<?= asset('assets/img/hero/hero_ai_two.png') ?>" alt="Escena de Matrix">
           </div>
         </article>
       </section>
@@ -47,15 +47,7 @@
             <img
                 alt="" 
                 title=""
-                srcset="
-                <?= asset('assets/img/test/dummy_1800.avif') ?> 1800w,
-                <?= asset('assets/img/test/dummy_1200.avif') ?> 1200w
-                "
-                sizes="
-                (max-width:800px) 900px,
-                1500px
-                "
-                src="<?= asset('assets/img/test/dummy_1200.avif') ?>"          
+                src="<?= asset('assets/img/servicios/auditoria_ai.png') ?>"          
             >
             <div>
                 <h3>servicio de pintor</h3>
@@ -71,15 +63,7 @@
             <img
                 alt="" 
                 title=""
-                srcset="
-                <?= asset('assets/img/test/dummy_1800.avif') ?> 1800w,
-                <?= asset('assets/img/test/dummy_1200.avif') ?> 1200w
-                "
-                sizes="
-                (max-width:800px) 900px,
-                1500px
-                "
-                src="<?= asset('assets/img/test/dummy_1200.avif') ?>"          
+                src="<?= asset('assets/img/servicios/ecosistemas.png') ?>"          
             >
             <div>
                 <h3>Restaurador de muebles</h3>

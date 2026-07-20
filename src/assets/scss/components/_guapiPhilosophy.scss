@@ -7,7 +7,7 @@
   align-items: flex-start;
   justify-content: center;
   background-color: c.$bg-darker;
-  padding: c.$padMax;
+  padding: 6rem 5%;
   text-align: left;
 
 
@@ -17,11 +17,12 @@
   }
 
   &__heading {
-    font-size: clamp(2rem, 4vw, 3rem);
     color: c.$accent-red;
     margin-bottom: 2rem;
     font-family: c.$fuenteTitulos;
     letter-spacing: 2px;
+    text-align: left;
+    width: 100%;
   }
 
   &__text {
