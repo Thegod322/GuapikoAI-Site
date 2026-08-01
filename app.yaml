@@ -1,5 +1,8 @@
 runtime: php82
 
+env_variables:
+  APP_ENV: production
+
 # Serve static files and route dynamic requests to index.php
 handlers:
 # Serve robots.txt and sitemap.xml directly
