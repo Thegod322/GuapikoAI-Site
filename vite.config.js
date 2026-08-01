@@ -12,7 +12,8 @@ export default defineConfig({
     origin: "http://localhost:5173",
   },
   build: {
-    emptyOutDir: true,
+    outDir: "public",
+    emptyOutDir: false,
     manifest: true,
     rollupOptions: {
       input: {

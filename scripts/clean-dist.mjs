@@ -2,13 +2,8 @@ import { rmSync } from "node:fs";
 import { resolve } from "node:path";
 
 const root = process.cwd();
-const dist = resolve(root, "dist");
+const assets = resolve(root, "public/assets");
+const vite = resolve(root, "public/.vite");
 
-if (!dist.startsWith(root)) {
-  throw new Error(`Ruta dist fuera del proyecto: ${dist}`);
-}
-
-rmSync(dist, {
-  recursive: true,
-  force: true,
-});
+rmSync(assets, { recursive: true, force: true });
+rmSync(vite, { recursive: true, force: true });

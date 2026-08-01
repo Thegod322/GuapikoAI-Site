@@ -28,4 +28,5 @@ dist-ssr
 
 .env
 dist
-
+public/assets/
+public/.vite/
