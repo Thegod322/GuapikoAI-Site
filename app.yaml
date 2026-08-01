@@ -9,20 +9,24 @@ handlers:
 - url: /(robots\.txt|sitemap\.xml)$
   static_files: public/\1
   upload: public/(robots\.txt|sitemap\.xml)$
+  secure: always
 
 # Serve Vite build output directly (CSS, JS, fonts, images)
 - url: /dist/(.*)
   static_files: public/dist/\1
   upload: public/dist/.*
+  secure: always
 
 # Serve other static assets from public directory (favicon, etc.)
 - url: /(.*\.(gif|png|jpg|jpeg|webp|css|js|woff|woff2|ttf|eot|svg|ico|mp4|webm))$
   static_files: public/\1
   upload: public/.*\.(gif|png|jpg|jpeg|webp|css|js|woff|woff2|ttf|eot|svg|ico|mp4|webm)$
+  secure: always
 
 # Route all other requests to the PHP front controller
 - url: /.*
   script: auto
+  secure: always
 
 # Strict scaling limits to stay within the Always Free tier
 instance_class: F1
