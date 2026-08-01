@@ -1,0 +1,25 @@
+runtime: php82
+
+# Serve static files and route dynamic requests to index.php
+handlers:
+# Serve static assets directly from public directory
+- url: /(.*\.(gif|png|jpg|css|js|woff|woff2|ttf|eot|svg|ico))$
+  static_files: public/\1
+  upload: public/.*\.(gif|png|jpg|css|js|woff|woff2|ttf|eot|svg|ico)$
+
+# Serve Vite build output directly
+- url: /dist/(.*)
+  static_files: public/dist/\1
+  upload: public/dist/.*
+
+# Route all other requests to the PHP front controller
+- url: /.*
+  script: auto
+  document_root: public
+
+# Strict scaling limits to stay within the Always Free tier
+instance_class: F1
+automatic_scaling:
+  max_instances: 1
+  min_instances: 0
+  max_idle_instances: 1
