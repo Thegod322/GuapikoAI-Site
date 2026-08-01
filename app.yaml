@@ -1,8 +1,5 @@
 runtime: php82
 
-# The front controller lives in public/
-entrypoint: serve public/
-
 # Serve static files and route dynamic requests to index.php
 handlers:
 # Serve robots.txt and sitemap.xml directly
