@@ -204,11 +204,13 @@ function switch_lang_url(string $targetLang): string
     }
     
     $currentView = $routes[$lang][$currentUrl]['view'];
-    
+    $currentProject = $routes[$lang][$currentUrl]['project'] ?? null;
+
     // Buscamos la vista equivalente en el idioma destino
+    // (varias rutas comparten vista, p. ej. los proyectos: se distinguen por 'project')
     if (isset($routes[$targetLang])) {
         foreach ($routes[$targetLang] as $u => $routeData) {
-            if ($routeData['view'] === $currentView) {
+            if ($routeData['view'] === $currentView && ($routeData['project'] ?? null) === $currentProject) {
                 return url($u);
             }
         }

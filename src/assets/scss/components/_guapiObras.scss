@@ -46,14 +46,15 @@
   &__card {
     width: 100%;
     @media only screen and (min-width: c.$tablet) {
-      width: 23%; // 4 tarjetas con espacio entre ellas
+      width: 31.5%; // 3 proyectos con espacio entre ellos
     }
     background-color: c.$bg-darker;
-    padding: 3rem 2rem;
+    padding: 0 0 2.5rem;
     border-left: 2px solid c.$accent-red;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    overflow: hidden;
     transition: transform 0.3s ease, border-color 0.3s ease;
     text-decoration: none;
 
@@ -62,9 +63,26 @@
       border-color: c.$text-light;
     }
 
+    img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: center top;
+      margin-bottom: 1rem;
+      transition: transform 0.5s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.03);
+    }
+
+    > :not(img) {
+      margin-inline: 2rem;
+    }
+
     h3 {
-      color: c.$accent-red;
-      font-size: 1.5rem;
+      color: c.$text-light;
+      font-size: 1.6rem;
       font-family: c.$fuenteTitulos;
     }
 
@@ -72,7 +90,26 @@
       color: c.$text-muted;
       line-height: 1.6;
       font-size: 1rem;
+      flex-grow: 1;
     }
+  }
+
+  &__category {
+    color: c.$accent-red;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  &__more {
+    color: c.$text-light;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  &__card:hover &__more {
+    color: c.$accent-red;
   }
 
   &__footer {

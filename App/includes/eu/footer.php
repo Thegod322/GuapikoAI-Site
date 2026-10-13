@@ -25,27 +25,23 @@
     <section class="footer01__column" aria-labelledby="footer01-contact-title-eu">
       <h2 class="footer01__title" id="footer01-contact-title-eu">Kontaktua</h2>
       <address class="footer01__address">
-        <a class="footer01__link" href="<?= env('PHONE_LINK', 'tel:+34000000000') ?>">
+        <a class="footer01__link" href="tel:+34622618577">
           <img class="footer01__icon" src="<?= asset('assets/img/icons/phone.svg') ?>" alt="Telefonoaren Ikonoa" title="Telefonoz Deitu">
-          <span><?= env('PHONE_TEXT', '+34 000 000 000') ?></span>
+          <span>+34 622 618 577</span>
         </a>
-        <a class="footer01__link" href="<?= env('EMAIL_LINK', 'mailto:hola@ejemplo.com') ?>">
+        <a class="footer01__link" href="https://wa.me/34622618577" target="_blank" rel="noopener noreferrer">
+          <img class="footer01__icon" src="<?= asset('assets/img/icons/logo-whatsapp.svg') ?>" alt="WhatsApp-en Ikonoa" title="WhatsApp bidez idatzi">
+          <span>WhatsApp</span>
+        </a>
+        <a class="footer01__link" href="mailto:guapiko.style@gmail.com">
           <img class="footer01__icon" src="<?= asset('assets/img/icons/mail.svg') ?>" alt="Posta Elektronikoaren Ikonoa" title="Mezu Elektronikoa Bidali">
-          <span><?= env('EMAIL_TEXT', 'hola@ejemplo.com') ?></span>
+          <span>guapiko.style@gmail.com</span>
         </a>
-        <a class="footer01__link" href="<?= env('MAPS_LINK', 'https://www.google.com/maps/search/?api=1&query=Calle+Ejemplo+1') ?>" target="_blank" rel="noopener noreferrer">
-          <img class="footer01__icon" src="<?= asset('assets/img/icons/map.svg') ?>" alt="Maparen Ikonoa" title="Ikusi Mapan">
-          <span>Ikusi Google Maps-en</span>
-        </a>
-        <p class="footer01__text">
-          <img class="footer01__icon" src="<?= asset('assets/img/icons/pin.svg') ?>" alt="Kokapenaren Ikonoa" title="Gure Kokapena">
-          <span>Calle Ejemplo 1, 00000 Ciudad</span>
-        </p>
       </address>
     </section>
   </div>
 
   <div class="footer01__bottom">
-    <p>xxxx-k garatua. &copy; <?= date('Y') ?> Eskubide guztiak erreserbatuta.</p>
+    <p>Guapikok garatua. &copy; <?= date('Y') ?> Eskubide guztiak erreserbatuta.</p>
   </div>
 </footer>

@@ -43,9 +43,21 @@ return [
                 'view' => 'servicio_detalle.php',
                 'resources' => 'src/assets/js/servicio_detalle.js',
             ],
-            '/es/casos-de-exito/detalle' => [
+            // Una ruta por proyecto; 'project' es la clave en App/data/<idioma>/proyectos.php
+            '/es/casos-de-exito/mdd-editor' => [
                 'view' => 'proyecto_detalle.php',
                 'resources' => 'src/assets/js/proyecto_detalle.js',
+                'project' => 'mdd-editor',
+            ],
+            '/es/casos-de-exito/trading-lab' => [
+                'view' => 'proyecto_detalle.php',
+                'resources' => 'src/assets/js/proyecto_detalle.js',
+                'project' => 'trading-lab',
+            ],
+            '/es/casos-de-exito/bilagun' => [
+                'view' => 'proyecto_detalle.php',
+                'resources' => 'src/assets/js/proyecto_detalle.js',
+                'project' => 'bilagun',
             ],
             '/es/formacion/detalle' => [
                 'view' => 'curso_detalle.php',
@@ -101,9 +113,21 @@ return [
                 'view' => 'servicio_detalle.php',
                 'resources' => 'src/assets/js/servicio_detalle.js',
             ],
-            '/eu/kasu-arrakastatsuak/xehetasuna' => [
+            // Una ruta por proyecto; 'project' es la clave en App/data/<idioma>/proyectos.php
+            '/eu/kasu-arrakastatsuak/mdd-editor' => [
                 'view' => 'proyecto_detalle.php',
                 'resources' => 'src/assets/js/proyecto_detalle.js',
+                'project' => 'mdd-editor',
+            ],
+            '/eu/kasu-arrakastatsuak/trading-lab' => [
+                'view' => 'proyecto_detalle.php',
+                'resources' => 'src/assets/js/proyecto_detalle.js',
+                'project' => 'trading-lab',
+            ],
+            '/eu/kasu-arrakastatsuak/bilagun' => [
+                'view' => 'proyecto_detalle.php',
+                'resources' => 'src/assets/js/proyecto_detalle.js',
+                'project' => 'bilagun',
             ],
             '/eu/prestakuntza/xehetasuna' => [
                 'view' => 'curso_detalle.php',
