@@ -18,12 +18,6 @@
     </a>
   </li>
 
-  <li class="enlaces01__item">
-    <a class="enlaces01__link" href="/eu/prestakuntza">
-      <img class="enlaces01__icon" src="<?= asset('assets/img/icons/tag.svg') ?>" alt="Ikastaroen Ikonoa" title="Joan Ikastaroetara">
-      <span>Ikastaroak</span>
-    </a>
-  </li>
 
   <li class="enlaces01__item">
     <a class="enlaces01__link" href="/eu/kasu-arrakastatsuak">

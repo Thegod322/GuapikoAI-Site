@@ -1,0 +1,322 @@
+@use "../resources/config" as c;
+
+// Página de caso de éxito (proyecto_detalle.php). Mucho aire: cada bloque
+// respira por sí mismo, como en el resto de la web.
+.guapiCase {
+  &__hero {
+    width: 100%;
+    padding: 9rem 5% 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background-color: c.$bg-dark;
+  }
+
+  &__back {
+    color: c.$text-muted;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: c.$accent-red;
+    }
+  }
+
+  &__category {
+    color: c.$accent-red;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: clamp(3rem, 9vw, 7.5rem);
+    color: c.$text-light;
+    text-align: left;
+    letter-spacing: -1px;
+    line-height: 1;
+    width: 100%;
+  }
+
+  &__lead {
+    color: rgba(c.$text-light, 0.85);
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    line-height: 1.6;
+    max-width: 50ch;
+  }
+
+  &__facts {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    border-top: 1px solid rgba(c.$text-muted, 0.3);
+    padding-top: 1.5rem;
+
+    @media only screen and (min-width: c.$tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    dt {
+      color: c.$text-muted;
+      font-family: c.$fuenteTextos;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    dd {
+      color: c.$text-light;
+      font-family: c.$fuenteTextos;
+      font-size: 1.1rem;
+    }
+  }
+
+  &__cover {
+    width: 90%;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid rgba(c.$accent-red, 0.35);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 60px rgba(255, 20, 90, 0.12);
+    }
+  }
+
+  &__story {
+    width: 100%;
+    padding: 8rem 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    align-items: start;
+
+    @media only screen and (min-width: c.$desktop) {
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h2 {
+      color: c.$text-light;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: 1px;
+    }
+
+    p {
+      color: rgba(c.$text-light, 0.82);
+      font-size: 1.15rem;
+      line-height: 1.85;
+    }
+  }
+
+  &__index {
+    color: c.$accent-red;
+    font-family: c.$fuenteTitulos;
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+  }
+
+  &__results {
+    width: 100%;
+    padding: 5rem 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    background-color: c.$bg-darker;
+    border-top: 1px solid rgba(c.$accent-red, 0.25);
+    border-bottom: 1px solid rgba(c.$accent-red, 0.25);
+
+    @media only screen and (min-width: c.$tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__result {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    strong {
+      color: c.$accent-red;
+      font-family: c.$fuenteTitulos;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1;
+    }
+
+    span {
+      color: c.$text-muted;
+      font-size: 1rem;
+      line-height: 1.5;
+      max-width: 26ch;
+    }
+  }
+
+  &__sectionTitle {
+    color: c.$text-light;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: 1px;
+    width: 100%;
+    border-bottom: 1px solid rgba(c.$text-muted, 0.3);
+    padding-bottom: 1rem;
+  }
+
+  &__features {
+    width: 100%;
+    padding: 8rem 5% 4rem;
+    align-items: flex-start;
+  }
+
+  &__featureGrid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @media only screen and (min-width: c.$tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (min-width: c.$desktop) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  &__feature {
+    padding: 2.5rem 2rem;
+    background-color: c.$bg-darker;
+    border-left: 2px solid c.$accent-red;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @include c.accent-glow-hover(-4px, 0.2);
+
+    h3 {
+      color: c.$text-light;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+    }
+
+    p {
+      color: c.$text-muted;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+  }
+
+  &__gallery {
+    width: 100%;
+    padding: 4rem 5%;
+    align-items: flex-start;
+    row-gap: 4rem;
+  }
+
+  &__shot {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid rgba(c.$text-muted, 0.2);
+    }
+
+    figcaption {
+      margin-top: 1rem;
+      color: c.$text-muted;
+      font-family: c.$fuenteTextos;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+
+  &__stack {
+    width: 100%;
+    padding: 4rem 5%;
+    align-items: flex-start;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    li {
+      font-family: c.$fuenteTextos;
+      color: c.$text-light;
+      border: 1px solid rgba(c.$accent-red, 0.6);
+      border-radius: 999px;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  &__note {
+    color: c.$text-muted;
+    font-style: italic;
+  }
+
+  &__cta {
+    width: 100%;
+    padding: 8rem 5%;
+    text-align: center;
+    background-color: c.$bg-darker;
+
+    h2 {
+      color: c.$text-light;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    p {
+      color: c.$text-muted;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      max-width: 55ch;
+    }
+  }
+
+  &__next {
+    width: 100%;
+    padding: 4rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+    text-align: right;
+    border-top: 1px solid rgba(c.$text-muted, 0.2);
+
+    span {
+      color: c.$text-muted;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+
+    strong {
+      color: c.$text-light;
+      font-family: c.$fuenteTitulos;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      transition: color 0.3s ease;
+    }
+
+    &:hover strong {
+      color: c.$accent-red;
+    }
+  }
+}

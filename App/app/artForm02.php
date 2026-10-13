@@ -6,7 +6,7 @@ require_once $basePath . '/vendor/autoload.php';
 use Dotenv\Dotenv;
 
 $dotenv = Dotenv::createImmutable($basePath);
-$dotenv->load();
+$dotenv->safeLoad();
 
 require_once $basePath . '/App/config/helpers.php';
 
@@ -15,6 +15,7 @@ $nombre = trim((string) ($_POST['nombre'] ?? ''));
 $telefono = trim((string) ($_POST['telefono'] ?? ''));
 $email = trim((string) ($_POST['email'] ?? ''));
 $mensaje = trim((string) ($_POST['mensaje'] ?? ''));
+$empresa = trim((string) ($_POST['empresa'] ?? ''));
 $terminos = (string) ($_POST['terminos'] ?? '');
 $respUser = trim((string) ($_POST['respUser'] ?? ''));
 $respSystem = trim((string) ($_POST['respSystem'] ?? ''));
@@ -61,101 +62,37 @@ if (comprobarVacio($mensaje)) {
     enviarRespuestaAsincrona('El mensaje no puede quedar vacío', true, 'mensaje');
 }
 
-if (comprobarCaracteres($mensaje, 4, 200)) {
-    enviarRespuestaAsincrona('El mensaje debe tener entre 4 y 200 caracteres', true, 'mensaje');
+if (comprobarCaracteres($mensaje, 4, 1500)) {
+    enviarRespuestaAsincrona('El mensaje debe tener entre 4 y 1500 caracteres', true, 'mensaje');
 }
 
-// 3. Cargar una sola vez la plantilla usada por los dos correos.
-$templatePath = $basePath . '/App/app/templates/artForm02.html';
-$html = file_get_contents($templatePath);
-
-if (!is_string($html)) {
-    error_log('artForm02: no se ha podido leer la plantilla de correo.');
-    enviarRespuestaAsincrona('No se ha podido preparar el correo. Inténtalo de nuevo más tarde.', true, 'envio');
+if (comprobarCaracteres($empresa, 0, 100)) {
+    enviarRespuestaAsincrona('El nombre de la empresa no puede superar los 100 caracteres', true, 'empresa');
 }
 
+// La empresa es opcional: si llega, va al principio del mensaje.
+if ($empresa !== '') {
+    $mensaje = "Empresa: $empresa\n\n$mensaje";
+}
+
+// 3. Avisar por Telegram (sustituye al correo: no necesita SMTP).
+// Token y chat se configuran en .env: TELEGRAM_BOT_TOKEN y TELEGRAM_CHAT_ID.
 $web = app_url($url);
-$nombreAsunto = str_replace(["\r", "\n"], ' ', $nombre);
+$textoTelegram = "☕ <b>Nueva solicitud de café</b> · guapiko.com\n\n"
+    . "<b>Nombre:</b> " . e($nombre) . "\n"
+    . "<b>Teléfono:</b> " . e($telefono) . "\n"
+    . "<b>Email:</b> " . e($email) . "\n"
+    . "<b>Idioma:</b> " . e($lang) . "\n\n"
+    . "<b>Mensaje:</b>\n" . e($mensaje) . "\n\n"
+    . "<i>" . e($fecha) . " · " . e($web) . "</i>";
 
-// Los valores insertados en el correo HTML deben ir escapados.
-$valoresHtml = [
-    'web' => e($web),
-    'url' => e($url),
-    'nombre' => e($nombre),
-    'telefono' => e($telefono),
-    'email' => e($email),
-    'mensaje' => nl2br(e($mensaje)),
-    'fecha' => e($fecha),
-];
+require_once $basePath . '/App/app/enviarTelegram.php';
+$errorTelegram = enviarTelegram($textoTelegram);
 
-// 4. Correo de aviso a la administración.
-$correoEmisor = env('EMAIL_WEB', '');
-$nombreEmisor = 'Web de ejemplo';
-$correoDestinatario = env('EMAIL_ADMIN', '');
-$nombreDestinatario = 'Administración';
-$correoResponderA = $email;
-$nombreResponderA = $nombreAsunto;
-$asunto = "Nueva consulta desde la web de ejemplo: $nombreAsunto";
-
-$vars = [
-    '{web}' => $valoresHtml['web'],
-    '{url}' => $valoresHtml['url'],
-    '{asunto}' => e($asunto),
-    '{aviso}' => 'Se ha recibido una nueva consulta desde la web de ejemplo.',
-    '{explicacion}' => 'Se ha recibido una consulta desde el formulario de la web.',
-    '{contexto}' => 'Nueva consulta de',
-    '{razon}' => 'Puedes responder directamente al correo facilitado por esta persona.',
-    '{nombre}' => $valoresHtml['nombre'],
-    '{telefono}' => $valoresHtml['telefono'],
-    '{email}' => $valoresHtml['email'],
-    '{mensaje}' => $valoresHtml['mensaje'],
-    '{responder}' => 'Procura responder en un plazo máximo de 2 días laborables.',
-    '{fecha}' => $valoresHtml['fecha'],
-];
-
-$cuerpo = str_replace(array_keys($vars), array_values($vars), $html);
-$cuerpoTexto = "Nueva consulta de $nombre\nTeléfono: $telefono\nEmail: $email\nMensaje: $mensaje\nFecha: $fecha\nURL: $web";
-include $basePath . '/App/app/envioPhpMailer.php';
-$correoAdminEnviado = $envioCorreoOk;
-$errorCorreoAdmin = $envioCorreoError;
-
-// Si no llega el aviso principal, no intentamos un segundo correo con la misma
-// conexion SMTP. Asi evitamos agotar el tiempo maximo de ejecucion de PHP.
-if (!$correoAdminEnviado) {
-    error_log('artForm02: no se ha enviado el aviso a administracion. ' . ($errorCorreoAdmin ?? 'Sin detalle.'));
-    enviarRespuestaAsincrona('No se ha podido enviar el correo. Intentalo de nuevo mas tarde.', true, 'envio');
+if ($errorTelegram !== null) {
+    error_log('artForm02: no se ha enviado el aviso a Telegram. ' . $errorTelegram);
+    enviarRespuestaAsincrona('No se ha podido enviar tu mensaje. Inténtalo de nuevo más tarde o escríbenos por WhatsApp.', true, 'envio');
 }
-
-// 5. Correo de confirmación a la persona que ha escrito.
-$correoEmisor = env('EMAIL_WEB', '');
-$nombreEmisor = 'Web de ejemplo';
-$correoDestinatario = $email;
-$nombreDestinatario = $nombreAsunto;
-$correoResponderA = env('EMAIL_ADMIN', env('EMAIL_WEB', ''));
-$nombreResponderA = 'Administración';
-$asunto = "$nombreAsunto, hemos recibido tu consulta | Web de ejemplo";
-
-$vars = [
-    '{web}' => $valoresHtml['web'],
-    '{url}' => $valoresHtml['url'],
-    '{asunto}' => e($asunto),
-    '{aviso}' => 'Tu consulta se ha recibido correctamente.',
-    '{explicacion}' => 'Gracias por contactar con nosotros. Hemos recibido correctamente tu consulta.',
-    '{contexto}' => 'Gracias por escribir,',
-    '{razon}' => 'Estos son los datos que nos has enviado.',
-    '{nombre}' => $valoresHtml['nombre'],
-    '{telefono}' => $valoresHtml['telefono'],
-    '{email}' => $valoresHtml['email'],
-    '{mensaje}' => $valoresHtml['mensaje'],
-    '{responder}' => 'Responderemos lo antes posible.',
-    '{fecha}' => $valoresHtml['fecha'],
-];
-
-$cuerpo = str_replace(array_keys($vars), array_values($vars), $html);
-$cuerpoTexto = "Hola $nombre, hemos recibido tu consulta.\nTeléfono: $telefono\nEmail: $email\nMensaje: $mensaje\nFecha: $fecha";
-include $basePath . '/App/app/envioPhpMailer.php';
-$correoUsuarioEnviado = $envioCorreoOk;
-$errorCorreoUsuario = $envioCorreoError;
 
 // 6. Guardar la consulta si este proyecto tiene una BBDD configurada.
 $bbddHost = env('BBDD_HOST');
@@ -183,13 +120,6 @@ if (extension_loaded('mysqli') && $bbddHost && $bbddUser && $bbddNombre) {
 
         mysqli_close($con);
     }
-}
-
-// Nunca se confirma el formulario si SMTP no ha aceptado los dos correos.
-if (!$correoUsuarioEnviado) {
-    error_log('artForm02: no se ha enviado la confirmacion al usuario. ' . ($errorCorreoUsuario ?? 'Sin detalle.'));
-
-    enviarRespuestaAsincrona('No se ha podido enviar el correo. Inténtalo de nuevo más tarde.', true, 'envio');
 }
 
 enviarRespuestaAsincrona("Gracias por escribir, $nombre. En breve te contactaremos.", false, $nombre);

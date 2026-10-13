@@ -11,33 +11,24 @@
   &__grid {
     width: 100%;
     display: grid;
-    gap: 1rem;
-    grid-auto-rows: auto;
-    grid-auto-columns: auto;
-    grid-template-areas:
-      'area01'
-      'area02'
-      'area03'
-      'area04'
-      'area05'
-      'area06';
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
 
+    // 3 proyectos: el primero grande, los otros dos apilados a su lado.
     @media only screen and (min-width: c.$tablet) {
-      width: 100%;
-      grid-auto-rows: 50dvh;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 60dvh;
       grid-template-areas:
         'area01 area01'
-        'area02 area03'
-        'area04 area04'
-        'area05 area06';
+        'area02 area03';
     }
 
     @media only screen and (min-width: c.$desktop) {
-      grid-auto-rows: 50dvh;
+      grid-template-columns: 3fr 2fr;
+      grid-auto-rows: 45dvh;
       grid-template-areas:
-        'area01 area01 area02 area02'
-        'area03 area04 area04 area05'
-        'area03 area04 area04 area06';
+        'area01 area02'
+        'area01 area03';
     }
   }
 
@@ -53,7 +44,13 @@
     position: relative;
     text-decoration: none;
     border-radius: 5px;
+    background-color: c.$bg-darker;
     @include c.accent-glow-hover(0px, 0.4);
+
+    // En móvil: imagen arriba y texto debajo. Desde tablet, texto sobre la imagen.
+    @media only screen and (min-width: c.$tablet) {
+      min-height: 420px;
+    }
 
     &::after {
       content: '';
@@ -64,7 +61,7 @@
       background: linear-gradient(60deg, c.$bg-dark, c.$accent-red, c.$bg-dark, c.$accent-red) border-box;
       background-size: 300% 300%;
       -webkit-mask:
-        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0) padding-box,
         linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
@@ -79,49 +76,88 @@
       animation: none;
     }
 
-    &:nth-of-type(1) { grid-area: area01; }
-    &:nth-of-type(2) { grid-area: area02; }
-    &:nth-of-type(3) { grid-area: area03; }
-    &:nth-of-type(4) { grid-area: area04; }
-    &:nth-of-type(5) { grid-area: area05; }
-    &:nth-of-type(6) { grid-area: area06; }
+    @media only screen and (min-width: c.$tablet) {
+      &:nth-of-type(1) { grid-area: area01; }
+      &:nth-of-type(2) { grid-area: area02; }
+      &:nth-of-type(3) { grid-area: area03; }
+    }
 
     img {
+      display: block;
       width: 100%;
-      height: 100%;
+      aspect-ratio: 16 / 10;
       object-fit: cover;
       object-position: center;
-      transition: transform 0.5s ease-in-out;
+      transition: transform 0.6s ease-in-out;
+
+      @media only screen and (min-width: c.$tablet) {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        aspect-ratio: auto;
+      }
     }
 
     &:hover img {
-      transform: scale(1.05);
+      transform: scale(1.04);
     }
+  }
 
-    .guapiPortfolio__overlay {
+  &__overlay {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.6rem;
+    pointer-events: none;
+
+    @media only screen and (min-width: c.$tablet) {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 40%; // to give enough room for the gradient
-      background: linear-gradient(to top, rgba(16, 16, 16, 0.9) 0%, rgba(16, 16, 16, 0) 100%);
-      display: flex;
-      align-items: flex-end;
-      padding: 1.5rem;
-      pointer-events: none; // ensure it doesn't block hover
+      inset: auto 0 0 0;
+      min-height: 65%;
+      padding: 2rem 1.5rem 1.5rem;
+      background: linear-gradient(to top, rgba(16, 16, 16, 0.97) 0%, rgba(16, 16, 16, 0.85) 45%, rgba(16, 16, 16, 0) 100%);
     }
 
-    .guapiPortfolio__title {
-      color: c.$text-light;
-      font-size: 1.5rem;
-      font-family: c.$fuenteTitulos;
-      margin: 0;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-      transition: color 0.3s ease;
+    @media only screen and (min-width: c.$desktop) {
+      padding: 2.5rem;
     }
+  }
 
-    &:hover .guapiPortfolio__title {
-      color: c.$accent-red; // adds a nice touch on hover
-    }
+  &__category {
+    color: c.$accent-red;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: c.$text-light;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-family: c.$fuenteTitulos;
+    letter-spacing: 1px;
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+
+  &__summary {
+    color: rgba(c.$text-light, 0.8);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 60ch;
+  }
+
+  &__more {
+    margin-top: 0.5rem;
+    color: c.$text-light;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  &__item:hover &__title,
+  &__item:hover &__more {
+    color: c.$accent-red;
   }
 }

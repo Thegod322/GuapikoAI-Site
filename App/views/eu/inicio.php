@@ -42,26 +42,15 @@
         </div>
         
         <div class="guapiObras__grid">
-          <!-- Dummy highlight 1 -->
-          <a href="<?= url('eu/kasu-arrakastatsuak') ?>" class="guapiObras__card">
-            <h3>MDD-Editor</h3>
-            <p>AI Pipeline & Graph Architecture. Egituraren kaosa ekosistema bisual fluido bihurtzen duen nodo-editorea, interfaze asimetrikoarekin.</p>
-          </a>
-          <!-- Dummy highlight 2 -->
-          <a href="<?= url('eu/kasu-arrakastatsuak') ?>" class="guapiObras__card">
-            <h3>Farm Capitalist</h3>
-            <p>Orkestrazio asimetrikoa eta optimizazio matematiko sakona IArekin integratutako joko-motorretan.</p>
-          </a>
-          <!-- Dummy highlight 3 -->
-          <a href="<?= url('eu/kasu-arrakastatsuak') ?>" class="guapiObras__card">
-            <h3>Waifu Capitalist</h3>
-            <p>Ekonomia asimetrikoa eta erabiltzaileen atxikipen sakonera bideratutako sistema konplexuen diseinua.</p>
-          </a>
-          <!-- Dummy highlight 4 -->
-          <a href="<?= url('eu/kasu-arrakastatsuak') ?>" class="guapiObras__card">
-            <h3>Graboid Run</h3>
-            <p>Nabigazio IA (Worm AI), pathfinding dinamikoa eta denbora errealean integratutako fisika arkitektura.</p>
-          </a>
+          <?php foreach (require app_path('data/eu/proyectos.php') as $proyecto): ?>
+            <a href="<?= url($proyecto['url']) ?>" class="guapiObras__card">
+              <img src="<?= asset($proyecto['image']) ?>" alt="<?= e($proyecto['image_alt']) ?>" title="<?= e($proyecto['title']) ?>" loading="lazy">
+              <span class="guapiObras__category"><?= e($proyecto['category']) ?></span>
+              <h3><?= e($proyecto['title']) ?></h3>
+              <p><?= e($proyecto['summary']) ?></p>
+              <span class="guapiObras__more">Ikusi proiektua &rarr;</span>
+            </a>
+          <?php endforeach; ?>
         </div>
         
         <div class="guapiObras__footer">

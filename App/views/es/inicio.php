@@ -42,26 +42,15 @@
         </div>
         
         <div class="guapiObras__grid">
-          <!-- Dummy highlight 1 -->
-          <a href="<?= url('es/casos-de-exito') ?>" class="guapiObras__card">
-            <h3>MDD-Editor</h3>
-            <p>AI Pipeline & Graph Architecture. Un editor nodal con interfaz asimétrica que convierte el caos estructural en un ecosistema visual fluido.</p>
-          </a>
-          <!-- Dummy highlight 2 -->
-          <a href="<?= url('es/casos-de-exito') ?>" class="guapiObras__card">
-            <h3>Farm Capitalist</h3>
-            <p>Orquestación asimétrica y optimización matemática profunda en motores de juego integrados con IA.</p>
-          </a>
-          <!-- Dummy highlight 3 -->
-          <a href="<?= url('es/casos-de-exito') ?>" class="guapiObras__card">
-            <h3>Waifu Capitalist</h3>
-            <p>Economía asimétrica y diseño de sistemas complejos orientados a la retención profunda de usuarios.</p>
-          </a>
-          <!-- Dummy highlight 4 -->
-          <a href="<?= url('es/casos-de-exito') ?>" class="guapiObras__card">
-            <h3>Graboid Run</h3>
-            <p>IA de navegación (Worm AI), pathfinding dinámico y arquitectura de físicas integradas en tiempo real.</p>
-          </a>
+          <?php foreach (require app_path('data/es/proyectos.php') as $proyecto): ?>
+            <a href="<?= url($proyecto['url']) ?>" class="guapiObras__card">
+              <img src="<?= asset($proyecto['image']) ?>" alt="<?= e($proyecto['image_alt']) ?>" title="<?= e($proyecto['title']) ?>" loading="lazy">
+              <span class="guapiObras__category"><?= e($proyecto['category']) ?></span>
+              <h3><?= e($proyecto['title']) ?></h3>
+              <p><?= e($proyecto['summary']) ?></p>
+              <span class="guapiObras__more">Ver proyecto &rarr;</span>
+            </a>
+          <?php endforeach; ?>
         </div>
         
         <div class="guapiObras__footer">

@@ -60,8 +60,11 @@ if (formulario) {
             cambiarEstadoFormulario(false)
             formulario.style.display = "none"
             modalEnvio.style.display = "flex"
-            tituloModal.innerText = respuesta.mensaje
-            textoModal.innerText = `Hemos recibido tu consulta, ${respuesta.param3}. En breve te contestaremos.`
+            // Cada vista puede traer sus propios textos de éxito (data-titulo-exito / data-texto-exito).
+            tituloModal.innerText = formulario.dataset.tituloExito || respuesta.mensaje
+            textoModal.innerText = formulario.dataset.textoExito
+                ? formulario.dataset.textoExito.replace("{nombre}", respuesta.param3)
+                : `Hemos recibido tu consulta, ${respuesta.param3}. En breve te contestaremos.`
         }
 
         xmlhttp.onerror = function () {

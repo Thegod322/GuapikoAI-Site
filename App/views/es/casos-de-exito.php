@@ -16,51 +16,24 @@
       <section class="guapiPhilosophy reveal-up" style="min-height: 40vh;">
         <div class="guapiPhilosophy__content">
           <h1 class="guapiPhilosophy__heading">Casos de Éxito</h1>
-          <p class="guapiPhilosophy__text">Soluciones asimétricas para problemas complejos. Una selección de ecosistemas en producción.</p>
+          <p class="guapiPhilosophy__text">Proyectos reales, contados por dentro: el reto, la solución y lo que se consiguió.</p>
         </div>
       </section>
 
-      <!-- Asymmetric Grid -->
+      <!-- Rejilla asimétrica: los proyectos salen de App/data/es/proyectos.php -->
       <section class="guapiPortfolio reveal-up">
         <div class="guapiPortfolio__grid">
-          
-          <a href="<?= url('es/casos-de-exito/detalle') ?>" class="guapiPortfolio__item">
-            <img src="<?= asset('assets/img/portfolio/mdd_editor.png') ?>" alt="MDD-Editor" title="Editor Multicapa de Diseño MDD">
-            <div class="guapiPortfolio__overlay">
-              <h3 class="guapiPortfolio__title">MDD-Editor</h3>
-            </div>
-          </a>
-          <a href="<?= url('es/casos-de-exito/detalle') ?>" class="guapiPortfolio__item">
-            <img src="<?= asset('assets/img/portfolio/waifu_capitalist.png') ?>" alt="Nutaku Waifu Capitalist" title="Proyecto Nutaku Waifu Capitalist">
-            <div class="guapiPortfolio__overlay">
-              <h3 class="guapiPortfolio__title">Nutaku Waifu Capitalist</h3>
-            </div>
-          </a>
-          <a href="<?= url('es/casos-de-exito/detalle') ?>" class="guapiPortfolio__item">
-            <img src="<?= asset('assets/img/portfolio/farm_capitalist.png') ?>" alt="CrazyGames Farm Capitalist" title="Proyecto CrazyGames Farm Capitalist">
-            <div class="guapiPortfolio__overlay">
-              <h3 class="guapiPortfolio__title">CrazyGames Farm Capitalist</h3>
-            </div>
-          </a>
-          <a href="<?= url('es/casos-de-exito/detalle') ?>" class="guapiPortfolio__item">
-            <img src="<?= asset('assets/img/portfolio/graboid_run.png') ?>" alt="Graboid Run" title="Juego Graboid Run">
-            <div class="guapiPortfolio__overlay">
-              <h3 class="guapiPortfolio__title">Graboid Run</h3>
-            </div>
-          </a>
-          <a href="<?= url('es/casos-de-exito/detalle') ?>" class="guapiPortfolio__item">
-            <img src="<?= asset('assets/img/portfolio/guapiko_studio.png') ?>" alt="Guapiko AI Studio" title="Plataforma Guapiko AI Studio">
-            <div class="guapiPortfolio__overlay">
-              <h3 class="guapiPortfolio__title">Guapiko AI Studio</h3>
-            </div>
-          </a>
-          <a href="<?= url('es/casos-de-exito/detalle') ?>" class="guapiPortfolio__item">
-            <img src="<?= asset('assets/img/portfolio/proyecto_alpha.png') ?>" alt="Proyecto Alpha" title="Desarrollo Proyecto Alpha">
-            <div class="guapiPortfolio__overlay">
-              <h3 class="guapiPortfolio__title">Proyecto Alpha</h3>
-            </div>
-          </a>
-
+          <?php foreach (require app_path('data/es/proyectos.php') as $proyecto): ?>
+            <a href="<?= url($proyecto['url']) ?>" class="guapiPortfolio__item">
+              <img src="<?= asset($proyecto['image']) ?>" alt="<?= e($proyecto['image_alt']) ?>" title="<?= e($proyecto['title']) ?>" loading="lazy">
+              <div class="guapiPortfolio__overlay">
+                <p class="guapiPortfolio__category"><?= e($proyecto['category']) ?></p>
+                <h2 class="guapiPortfolio__title"><?= e($proyecto['title']) ?></h2>
+                <p class="guapiPortfolio__summary"><?= e($proyecto['summary']) ?></p>
+                <span class="guapiPortfolio__more">Ver proyecto &rarr;</span>
+              </div>
+            </a>
+          <?php endforeach; ?>
         </div>
       </section>
 
